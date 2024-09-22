@@ -40,15 +40,15 @@
             padding: 10px 20px;
             border-radius: 10px;
             color: #7f8c8d;
-            white-space: nowrap;
             position: relative;
             opacity: 0;
             font-family: 'Brush Script MT', cursive;
             font-size: 36px;
-            overflow: hidden;
             animation: moveToCenter 6.5s ease-in-out forwards, typing 5s steps(35, end) forwards;
             width: fit-content;
             margin: 0 auto;
+            white-space: normal; /* Prevents text overflow on smaller screens */
+            word-wrap: break-word; /* Makes sure long words wrap properly */
         }
 
         @keyframes typing {
@@ -64,6 +64,38 @@
             100% {
                 transform: translateX(0);
                 opacity: 1;
+            }
+        }
+
+        /* For larger devices */
+        @media (min-width: 1200px) {
+            .txtquotes {
+                font-size: 36px;
+                padding: 15px 25px;
+            }
+        }
+
+        /* For medium devices */
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .txtquotes {
+                font-size: 28px;
+                padding: 12px 20px;
+            }
+        }
+
+        /* For small devices */
+        @media (max-width: 767px) {
+            .txtquotes {
+                font-size: 22px;
+                padding: 10px 15px;
+            }
+        }
+
+        /* For extra small devices */
+        @media (max-width: 480px) {
+            .txtquotes {
+                font-size: 18px;
+                padding: 8px 10px;
             }
         }
     </style>
@@ -234,10 +266,10 @@
                                         ventures that result in client satisfaction.</p><br>
                                     <p>The company is providing project services for
                                         Highways, Urban Infrastructure, Airports, Mining
-                                        Services & Railways. </p>
+                                        Services & Railways.
+                                    </p>
+                                    <br>
 
-
-                                    <p>&nbsp;</p>
                                     <div class="clear">&nbsp;</div>
                                     <div class="bigtxt text-center heading">
                                         <div class="txtquotes">
@@ -278,7 +310,7 @@
                                         <!-- 1987 -->
                                         <div class="para1" style="margin-bottom: 50px; position: relative;">
                                             <span class="year"
-                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -80px; top: 0;">1987</span>
+                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -65px; top: 0;">1987</span>
                                             <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; position: relative;">
                                                 <div style="width: 10px; height: 10px; background-color: #1E3A70; position: absolute; left: -15px; top: 10px; border-radius: 50%;"></div>
                                                 <p>Artefact Projects Ltd. was incorporated in Nagpur 1987, strongly
@@ -290,7 +322,7 @@
                                         <!-- 1998 -->
                                         <div class="para1" style="margin-bottom: 50px; position: relative;">
                                             <span class="year"
-                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -80px; top: 0;">1998</span>
+                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -65px; top: 0;">1998</span>
                                             <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; position: relative;">
                                                 <div style="width: 10px; height: 10px; background-color: #1E3A70; position: absolute; left: -15px; top: 10px; border-radius: 50%;"></div>
                                                 <p>In 1998 ventured into Infrastructure Consultancy Services as
@@ -301,7 +333,7 @@
                                         <!-- 2006 -->
                                         <div class="para1" style="margin-bottom: 50px; position: relative;">
                                             <span class="year"
-                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -80px; top: 0;">2006</span>
+                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -65px; top: 0;">2006</span>
                                             <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; position: relative;">
                                                 <div style="width: 10px; height: 10px; background-color: #1E3A70; position: absolute; left: -15px; top: 10px; border-radius: 50%;"></div>
                                                 <p>SECTORIAL Focus on Services for Highways, Airports, Urban Development
@@ -313,7 +345,7 @@
                                         <!-- 2010 -->
                                         <div class="para1" style="margin-bottom: 50px; position: relative;">
                                             <span class="year"
-                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -80px; top: 0;">2010</span>
+                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -65px; top: 0;">2010</span>
                                             <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; position: relative;">
                                                 <div style="width: 10px; height: 10px; background-color: #1E3A70; position: absolute; left: -15px; top: 10px; border-radius: 50%;"></div>
                                                 <p>Completed Successful Private Placement exercise of 9,00,000 Eq Shares
@@ -325,7 +357,7 @@
                                         <!-- 2012 -->
                                         <div class="para1" style="margin-bottom: 50px; position: relative;">
                                             <span class="year"
-                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -80px; top: 0;">2012</span>
+                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -65px; top: 0;">2012</span>
                                             <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; position: relative;">
                                                 <div style="width: 10px; height: 10px; background-color: #1E3A70; position: absolute; left: -15px; top: 10px; border-radius: 50%;"></div>
                                                 <p>Net Worth in the FY 2009-10: Rs. 276.99 Mns. National & International
@@ -336,7 +368,7 @@
                                         <!-- 2019 -->
                                         <div class="para1" style="margin-bottom: 50px; position: relative;">
                                             <span class="year"
-                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -80px; top: 0;">2019</span>
+                                                  style="background-color: #1E3A70; color: white; padding: 5px 10px; border-radius: 20px; font-weight: bold; position: absolute; left: -65px; top: 0;">2019</span>
                                             <div style="border: 1px solid #ddd; padding: 10px; border-radius: 5px; background-color: #f9f9f9; position: relative;">
                                                 <div style="width: 10px; height: 10px; background-color: #1E3A70; position: absolute; left: -15px; top: 10px; border-radius: 50%;"></div>
                                                 <p>Highway assignments Ongoing involve; 13 Construction Projects with
@@ -385,10 +417,14 @@
                                 </div>
                                 <br>
                                 <div class="widget_footer_social">
-                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i class="fa fa-facebook"></i> </a>&nbsp;
-                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i class="fa fa-twitter"></i> </a>&nbsp;
-                                    <a href="http://www.artefactprojects.com/" target="_blank"> <i class="fa fa-google-plus"></i> </a>&nbsp;
-                                    <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825" target="_blank"> <i class="fa fa-linkedin"></i> </a>
+                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
+                                            class="fa fa-facebook"></i> </a>&nbsp;
+                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
+                                            class="fa fa-twitter"></i> </a>&nbsp;
+                                    <a href="http://www.artefactprojects.com/" target="_blank"> <i
+                                            class="fa fa-google-plus"></i> </a>&nbsp;
+                                    <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825"
+                                       target="_blank"> <i class="fa fa-linkedin"></i> </a>
                                 </div>
                             </div>
                         </div>
