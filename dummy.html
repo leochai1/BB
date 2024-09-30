@@ -1,89 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>CodePen - Vertical Timeline</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
-    <link href="css/history.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Container for flexboxes */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Ensure equal spacing between columns */
+    }
+
+    /* Create four equal columns */
+    .column {
+      flex: 1 1 22%; /* Flex-grow: 1; Flex-shrink: 1; Flex-basis: 22% to ensure 4 equal columns */
+      padding: 20px;
+      border: 2px solid #003978;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+      margin: 10px;
+      min-width: 250px; /* Minimum width to avoid too small columns */
+    }
+
+    ul {
+        list-style: none; /* Remove default bullets */
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+    }
+
+    ul li {
+        margin-bottom: 10px; /* Add space between list items */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    ul li a {
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Set a professional text color */
+        background-color: #f9f9f9; /* Light background for the link */
+        padding: 8px 12px; /* Add padding to the links */
+        border: 1px solid #ddd; /* Light border for links */
+        border-radius: 5px; /* Rounded corners for a smooth look */
+        display: inline-block; /* Keep the link inline but allow padding */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    }
+
+    ul li a:hover {
+        background-color: #007BFF; /* Change background color on hover */
+        color: #fff; /* Change text color on hover */
+        border-color: #007BFF; /* Match border with the hover background */
+    }
+
+    /* On screens that are 992px wide or less, go from four columns to two columns */
+    @media screen and (max-width: 992px) {
+      .column {
+        flex: 1 1 45%; /* Adjust flex-basis to allow two columns on medium screens */
+      }
+    }
+
+    /* On screens that are 600px wide or less, make the columns stack on top of each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 1 1 100%; /* Stack columns vertically */
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+      }
+    }
+</style>
 
 </head>
 <body>
-<!-- partial -->
-<section class="timeline">
-    <div class="container">
-        <!--     ITEM 1  -->
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-
-            <div class="timeline-content js--fadeInLeft">
-                <h2>1987</h2>
-                <p>Artefact Projects Ltd. was incorporated in Nagpur 1987, strongly committed to serving India's
-                    development through their engineering capabilities.</p>
-            </div>
-        </div>
-
-        <!--     ITEM 2  -->
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content js--fadeInRight">
-                <h2>1988</h2>
-                <p>In 1998 ventured into Infrastructure Consultancy Services as Engineers, Planners & Project Management
-                    Consultants.</p>
-            </div>
-        </div>
-
-        <!--     ITEM 1  -->
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-
-            <div class="timeline-content js--fadeInLeft">
-                <h2>2006</h2>
-                <p>SECTORIAL Focus on Services for Highways, Airports, Urban Development (include SEZs, Reality,
-                    Townships). Gross Fees Receipts in past 5 years (FY-2006 to FY-2010) Rs. 113.64 Mns.</p>
-            </div>
-        </div>
-
-        <!--     ITEM 2  -->
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content js--fadeInRight">
-                <h2>2010</h2>
-                <p>Completed Successful Private Placement exercise of 9,00,000 Eq Shares and 10,22,400 warrants of
-                    Rs.10/- each at a premium of Rs.91/- each, amounting to Rs.194.2 Mns.</p>
-            </div>
-        </div>
-
-        <!--     ITEM 1  -->
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-
-            <div class="timeline-content js--fadeInLeft">
-                <h2>2012</h2>
-                <p>Net Worth in the FY 2009-10: Rs. 276.99 Mns. National & International Operations.</p>
-            </div>
-        </div>
-
-        <!--     ITEM 2  -->
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content js--fadeInRight">
-                <h2>2019</h2>
-                <p>Highway assignments Ongoing involve; 13 Construction Projects with 732.725 Km length, Rs. 7732.85 Cr.
-                    Billion Project Cost and 04 O&M Projects with 586.092 Km Length and Rs. 1200 Cr Billion Project
-                    Cost. Gross contracted fees as on sept 2019 stood at Rs.131.58 Cr and balance amount to be billed in
-                    next 3 years exceeds Rs. 25.60 Cr.</p>
-            </div>
-        </div>
 
 
+<div class="row">
+    <div class="column">
+        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+            <b>ANNUAL REPORTS</b></h3><br>
+        <ul>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
+                >2022 - 2023</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf"
+                >2021 - 2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
+                >2020&nbsp;- 2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
+                >2018&nbsp;- 2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
+                >2019&nbsp;- 2020</a>
+            </li>
+            <li><a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
+            >2020&nbsp;- 2021</a></li>
+            <li>
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf">2019&nbsp;- 2020</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
+                >2018&nbsp;- 2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
+                >2017 - 2018</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
+                >2016&nbsp;- 2017</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"
+                >2015-2016</a>
+            </li>
+
+        </ul>
+        
     </div>
-</section>
-<!-- partial -->
-<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
-<script src="js/history.js"></script>
+
+    <div class="column">
+        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+            <b>FINANCIAL RESULT QUARTERLY</b>
+        </h3>
+        <ul>
+            <li>
+                <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf">Sep&nbsp;2023</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf"
+                >June&nbsp;2023</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf"
+                >Mar 2023</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf"
+                >Dec&nbsp;2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf"
+                >Sep&nbsp;2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf"
+                >June&nbsp;2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf"
+                >Mar 2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf"
+                >Dec 2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf"
+                >Sep 2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf"
+                >Sep 2020</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf"
+                >June 2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf"
+                >March 2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf"
+                >Dec 2020</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf"
+                >June 2020</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf"
+                >March 2020</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Results_31.12.2019.pdf"
+                >Dec 2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Results_30.09.2019.pdf"
+                >Sep 2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Results_30.06.2019.pdf"
+                >June 2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Results_31.03.2019.pdf"
+                >Mar 2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Results_31.12.2018.pdf"
+                >Dec 2018</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Results_30.09.2018.pdf"
+                >Sep 2018</a>
+            </li>
+        </ul>
+        
+    </div>
+
+    <div class="column">
+        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+            <b>SCRUTINIZER REPORTS</b>
+        </h3>
+        <ul>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf"
+                >2023</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf"
+                >2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer Report_2021.pdf"
+                >2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer Report_2020.pdf"
+                >2020</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
+                >2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
+                >2018</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
+                >2019</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf.pdf"
+                >2017</a>
+            </li>
+
+        </ul>
+        
+    </div>
+
+    <div class="column">
+        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+            <b>ANNUAL RETURN</b>
+        </h3>
+        <ul>
+            <li>
+                <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
+                >2022-2023</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
+                >2021-2022</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"
+                >2020-2021</a>
+            </li>
+            <li>
+                <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"
+                >2019-2020</a>
+            </li>
+        </ul>
+        
+    </div>
+</div>
 
 </body>
 </html>
+
+

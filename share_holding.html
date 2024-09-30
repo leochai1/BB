@@ -33,15 +33,94 @@
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
-        td a {
-            color: blue; /* Sets the text color of links inside <td> to blue */
-            text-decoration: none; /* Removes the underline from the links */
+        /* Container Styling */
+        .tables-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
         }
 
-        td a:hover {
-            text-decoration: underline; /* Adds an underline on hover for better visibility */
+        /* Table Wrapper Styling */
+        .table-wrapper {
+            width: 48%;
         }
 
+        .table-wrapper h3 {
+            color: #003978;
+            font-size: 22px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Table Styling */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .styled-table th {
+            background-color: #003978;
+            color: white;
+            font-size: 16px;
+        }
+
+        .styled-table td a {
+            color: #003978;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .styled-table td a:hover {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+
+        /* Alternate Row Color */
+        .styled-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .styled-table tr:hover {
+            background-color: #e6f7ff; /* Row hover effect */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .tables-container {
+                flex-direction: column;
+            }
+
+            .table-wrapper {
+                width: 100%;
+            }
+
+            .styled-table th,
+            .styled-table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .table-wrapper h3 {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -90,7 +169,6 @@
                                 <li class="drop"><a href="corporate_governance.html">INVESTOR&nbsp;SERVICES</a>
                                     <ul class="dropdown">
                                         <li><a href="corporate_governance.html">CORPORATE GOVERNANCE</a></li>
-                                        <li><a href="corporate_governance.html#codeOfCondct">CODE OF CONDUCT</a></li>
                                         <li><a href="share_holding.html">SHARE HOLDING</a></li>
                                         <li><a href="financial_performance.html">FINANCIAL PERFORMANCE</a></li>
                                         <li><a href="financials.html">FINANCIAL REPORT</a></li>
@@ -185,264 +263,236 @@
             <div class="row">
                 <h2 class="sm-xs-center"
                     style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;"></h2>
-                <div class="col-md-12 col2bg">
 
-                    <div class="smallpage">
-                        <div class="col-md-12">
-                            <div class="col-md-6"><br>
-                                <h3 style="color: blue; font-size:20px;"><b>Shareholding Pattern</b></h3><br>
-                                <table
-                                        border="0"
-                                        cellpadding="0"
-                                        cellspacing="0"
-                                        class="table table-condensed"
-                                >
-                                    <tbody>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Shareholding Pattern</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Shareholding Pattern_31.03.2022.pdf"
-                                            >March 2022</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Shareholding Pattern_31.12.2021.pdf"
-                                            >December 2021</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/7 Shareholding Pattern_September 2021.pdf"
-                                            >September 2021</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/6 Shareholding Pattern_June 2021.pdf"
-                                            >June 2021</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/5 Shareholding Pattern_March 2021.pdf"
-                                            >March 2021</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/4 Shareholding Pattern_December 2020.pdf"
-                                            >December 2020</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/3 Shareholding Pattern_September 2020.pdf"
-                                            >September 2020</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/2 Shareholding Pattern_June 2020.pdf"
-                                            >June 2020</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/1 Shareholding Pattern_March 2020.pdf"
-                                            >March 2020</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/SHP_31.12.2019.pdf"
-                                            >December 2019</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/SHP_30.09.2019.pdf"
-                                            >September 2019</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>12.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/SHP_30.06.2019.pdf"
-                                            >June 2019</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>13.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/SHP_31.03.2019.pdf"
-                                            >March 2019</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>14.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/SHP_31.12.2018.pdf"
-                                            >December 2018</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                <div class="tables-container">
+                    <div class="table-wrapper">
+                        <h3>Shareholding Pattern</h3>
+                        <table class="styled-table">
+                            <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Shareholding Pattern</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td><a href="http://www.artefactprojects.com/Shareholding Pattern_31.03.2022.pdf">March
+                                    2022</a></td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td><a href="http://www.artefactprojects.com/Shareholding Pattern_31.12.2021.pdf">December
+                                    2021</a></td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/7 Shareholding Pattern_September 2021.pdf"
+                                    >September 2021</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/6 Shareholding Pattern_June 2021.pdf"
+                                    >June 2021</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/5 Shareholding Pattern_March 2021.pdf"
+                                    >March 2021</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/4 Shareholding Pattern_December 2020.pdf"
+                                    >December 2020</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/3 Shareholding Pattern_September 2020.pdf"
+                                    >September 2020</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/2 Shareholding Pattern_June 2020.pdf"
+                                    >June 2020</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/1 Shareholding Pattern_March 2020.pdf"
+                                    >March 2020</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/SHP_31.12.2019.pdf"
+                                    >December 2019</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/SHP_30.09.2019.pdf"
+                                    >September 2019</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/SHP_30.06.2019.pdf"
+                                    >June 2019</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/SHP_31.03.2019.pdf"
+                                    >March 2019</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/SHP_31.12.2018.pdf"
+                                    >December 2018</a
+                                    >
+                                </td>
+                            </tr>
 
-                                <p></p>
-                            </div>
+                            <!-- Add other rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
 
-                            <div class="col-md-6"><br>
-                                <h3 style="color: blue; font-size:20px;"><b>Forms for Shareholders</b></h3><br>
-                                <table
-                                        border="0"
-                                        cellpadding="0"
-                                        cellspacing="0"
-                                        class="table table-condensed"
-                                >
-                                    <tbody>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Shareholding Pattern</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Duplicate%20share%20indemnity%20Bond.doc"
-                                            >Duplicate share indemnity Bond</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Duplicate%20Shares%20Affidavit.doc"
-                                            >Duplicate Shares Affidavit</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Duplicate%20Shares%20Application.doc"
-                                            >Duplicate Shares Application</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Duplicate%20Shares%20Procedure.doc"
-                                            >Duplicate Shares Procedure</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/ECS%20Mandate.doc"
-                                            >ECS Mandate</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/FAQ%20Shareholders.doc"
-                                            >FAQ Shareholders</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Nomination%20Form.doc"
-                                            >Nomination Form</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Transmission%20Application.doc"
-                                            >Transmission Application</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Transmission%20of%20Share%20Indemnity%20Bond.doc"
-                                            >Transmission of Share Indemnity Bond</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Transmission%20of%20shares%20NOC.doc"
-                                            >Transmission of shares NOC</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11.</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Transmission%20Shares%20Affidavit.doc"
-                                            >Transmission Shares Affidavit</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>
-                                            <a href="http://www.artefactprojects.com/Share Transfer to IEPF -2009-10.xls"
-                                            >List of shares Transferred to IEPF</a
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <div class="table-wrapper">
+                        <h3>Forms for Shareholders</h3>
+                        <table class="styled-table">
+                            <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Forms</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td><a href="http://www.artefactprojects.com/Duplicate%20share%20indemnity%20Bond.doc">Duplicate
+                                    share indemnity Bond</a></td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td><a href="http://www.artefactprojects.com/Duplicate%20Shares%20Affidavit.doc">Duplicate
+                                    Shares Affidavit</a></td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Duplicate%20Shares%20Application.doc"
+                                    >Duplicate Shares Application</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Duplicate%20Shares%20Procedure.doc"
+                                    >Duplicate Shares Procedure</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/ECS%20Mandate.doc"
+                                    >ECS Mandate</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/FAQ%20Shareholders.doc"
+                                    >FAQ Shareholders</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Nomination%20Form.doc"
+                                    >Nomination Form</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Transmission%20Application.doc"
+                                    >Transmission Application</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Transmission%20of%20Share%20Indemnity%20Bond.doc"
+                                    >Transmission of Share Indemnity Bond</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Transmission%20of%20shares%20NOC.doc"
+                                    >Transmission of shares NOC</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Transmission%20Shares%20Affidavit.doc"
+                                    >Transmission Shares Affidavit</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12.</td>
+                                <td>
+                                    <a href="http://www.artefactprojects.com/Share Transfer to IEPF -2009-10.xls"
+                                    >List of shares Transferred to IEPF</a
+                                    >
+                                </td>
+                            </tr>
+
+                            <!-- Add other rows as needed -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -471,10 +521,14 @@
                                 </div>
                                 <br>
                                 <div class="widget_footer_social">
-                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i class="fa fa-facebook"></i> </a>&nbsp;
-                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i class="fa fa-twitter"></i> </a>&nbsp;
-                                    <a href="http://www.artefactprojects.com/" target="_blank"> <i class="fa fa-google-plus"></i> </a>&nbsp;
-                                    <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825" target="_blank"> <i class="fa fa-linkedin"></i> </a>
+                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
+                                            class="fa fa-facebook"></i> </a>&nbsp;
+                                    <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
+                                            class="fa fa-twitter"></i> </a>&nbsp;
+                                    <a href="http://www.artefactprojects.com/" target="_blank"> <i
+                                            class="fa fa-google-plus"></i> </a>&nbsp;
+                                    <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825"
+                                       target="_blank"> <i class="fa fa-linkedin"></i> </a>
                                 </div>
                             </div>
                         </div>

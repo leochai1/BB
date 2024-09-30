@@ -34,36 +34,74 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-        .pdcontainer {
-            padding: 20px;
-            border: 1px solid #D3D3D3; /* Black square border */
-            margin: 20px;
-            display: inline-block;
+        .custom-section * {
+          box-sizing: border-box;
+        }
+
+        /* Container for flexboxes */
+        .custom-section .row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; /* Ensure equal spacing between columns */
+        }
+
+        /* Create four equal columns */
+        .custom-section .column {
+          flex: 1 1 22%; /* Flex-grow: 1; Flex-shrink: 1; Flex-basis: 22% to ensure 4 equal columns */
+          padding: 20px;
+          border: 2px solid #003978;
+          border-radius: 8px;
+          background-color: #f5f5f5;
+          margin: 10px;
+          min-width: 250px; /* Minimum width to avoid too small columns */
+        }
+
+        .custom-section ul {
+            list-style: none; /* Remove default bullets */
+            padding: 0;
             text-align: center;
+            margin: 0;
+            font-family: 'Arial', sans-serif; /* Use a clean, professional font */
         }
 
-        .pdcontainer img {
-            border: 2px solid #000; /* Black border around the image */
-            padding: 5px;
+        .custom-section ul li {
+            margin-bottom: 10px; /* Add space between list items */
+            font-size: 16px; /* Adjust font size */
         }
 
-        .pdcontainer a {
-            color: #0000FF; /* Blue color for the links */
-            text-decoration: none;
+        .custom-section ul li a {
+            text-decoration: none; /* Remove underline */
+            color: #333; /* Set a professional text color */
+            background-color: #f9f9f9; /* Light background for the link */
+            padding: 8px 12px; /* Add padding to the links */
+            border: 1px solid #ddd; /* Light border for links */
+            border-radius: 5px; /* Rounded corners for a smooth look */
+            display: inline-block; /* Keep the link inline but allow padding */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
         }
 
-        .pdcontainer a strong {
-            color: #0000FF; /* Blue color for the <strong> text */
+        .custom-section ul li a:hover {
+            background-color: #007BFF; /* Change background color on hover */
+            color: #fff; /* Change text color on hover */
+            border-color: #007BFF; /* Match border with the hover background */
         }
 
-        .pdcontainer a:hover {
-            text-decoration: underline;
+        /* On screens that are 992px wide or less, go from four columns to two columns */
+        @media screen and (max-width: 992px) {
+          .custom-section .column {
+            flex: 1 1 45%; /* Adjust flex-basis to allow two columns on medium screens */
+          }
         }
 
-    .hover-effect:hover strong {
-        text-decoration: underline;
-    }
+        /* On screens that are 600px wide or less, make the columns stack on top of each other */
+        @media screen and (max-width: 600px) {
+          .custom-section .column {
+            flex: 1 1 100%; /* Stack columns vertically */
+            margin: 10px 0; /* Adjust margin for vertical stacking */
+          }
+        }
     </style>
+
 
 </head>
 
@@ -112,7 +150,6 @@
                                 <li class="drop"><a href="corporate_governance.html">INVESTOR&nbsp;SERVICES</a>
                                     <ul class="dropdown">
                                         <li><a href="corporate_governance.html">CORPORATE GOVERNANCE</a></li>
-                                        <li><a href="corporate_governance.html#codeOfCondct">CODE OF CONDUCT</a></li>
                                         <li><a href="share_holding.html">SHARE HOLDING</a></li>
                                         <li><a href="financial_performance.html">FINANCIAL PERFORMANCE</a></li>
                                         <li><a href="financials.html">FINANCIAL REPORT</a></li>
@@ -156,8 +193,6 @@
                                     <li class="drop"><a href="corporate_governance.html">INVESTOR&nbsp;SERVICES</a>
                                         <ul class="dropdown">
                                             <li><a href="corporate_governance.html">CORPORATE GOVERNANCE</a></li>
-                                            <li><a href="corporate_governance.html#codeOfCondct">CODE OF CONDUCT</a>
-                                            </li>
                                             <li><a href="share_holding.html">SHARE HOLDING</a></li>
                                             <li><a href="financial_performance.html">FINANCIAL PERFORMANCE</a></li>
                                             <li><a href="financials.html">FINANCIAL REPORT</a></li>
@@ -204,1085 +239,256 @@
     <!--    Add sections here-->
     <div class="midpage">
         <h2 align="left" class="sm-xs-center"
-            style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;"></h2><br>
-        <div class="container-fluid">
+            style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;">
+        </h2><br>
+
+        <div class="col-md-12">
+            &nbsp;
+            <p>
+                <strong>Artefact Projects</strong> has suitable financial
+                strength.
+            </p><br>
+        </div>
+        <br>
+
+        <div class="container">
             <div class="row">
-                <div class="col-md-12 col2bg">
-
-                    <div class="smallpage">
-
-                        <div class="col-md-12">
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    &nbsp;
-                                    <p>
-                                        <strong>Artefact Projects</strong> has suitable financial
-                                        strength.
-                                    </p><br>
-                                </div>
-
-                                <!-- search-bar-->
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12" style="position: relative;">
-                                            <input id="searchInput" onkeyup="searchReports()"
-                                                   placeholder="&#x1F50D; Search for year..."
-                                                   style="
-                                                        width: 100%;
-                                                        padding: 12px 20px 12px 40px;
-                                                        margin: 8px 0;
-                                                        box-sizing: border-box;
-                                                        border: 2px solid #ccc;
-                                                        border-radius: 4px;
-                                                        font-size: 16px;
-                                                        background-color: #f8f8f8;
-                                                        color: #333;" type="text">
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <br>
-
-
-                                <div class="reports">
-                                    <div class="col-md-4 col-sm-3">
-                                        <div class="row">
-                                            <div class="col-md-12 text-center">
-                                                <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                                                    <b>ANNUAL REPORTS</b></h3><br>
-                                                <p></p>
-
-                                                <div class="col-md-12 text-center">
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
-                                                            ><img alt=""
-                                                                  class="center-block"
-                                                                  height="auto"
-                                                                  src="images/old/download_pdf.png"
-                                                                  width="70"/></a>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
-                                                                ><strong>Annual Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
-                                                                >2022 - 2023</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                            ><img alt=""
-                                                                  class="center-block"
-                                                                  height="auto"
-                                                                  src="images/old/download_pdf.png"
-                                                                  width="70"/></a>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf"
-                                                                ><strong>Annual Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf"
-                                                                >2021 - 2022</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <p>
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                                ><img alt=""
-                                                                      class="center-block"
-                                                                      height="auto"
-                                                                      src="images/old/download_pdf.png"
-                                                                      width="70"/></a>
-                                                            </p>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                                ><strong>Annual Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                                >2020&nbsp;- 2021</a><a
-                                                                    href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                            ></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                            ><img alt=""
-                                                                  class="center-block"
-                                                                  height="auto"
-                                                                  src="images/old/download_pdf.png"
-                                                                  width="70"/></a>
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                                ><strong>Annual Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                                >2018&nbsp;- 2019</a><a
-                                                                    href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                                                            ><img alt=""
-                                                                  class="center-block"
-                                                                  height="auto"
-                                                                  src="images/old/download_pdf.png"
-                                                                  width="70"/></a>
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                                                                ><strong>Annual Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                                                                >2019&nbsp;- 2020</a><a
-                                                                    href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                            ><img alt=""
-                                                                  class="center-block"
-                                                                  height="auto"
-                                                                  src="images/old/download_pdf.png"
-                                                                  width="70"/></a>
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                                ><strong>Annual Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                                >2020&nbsp;- 2021</a
-                                                                ><a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                                                            ></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                                                                ><img
-                                                                        alt=""
-                                                                        class="center-block"
-                                                                        height="auto"
-                                                                        src="images/old/download_pdf.png"
-                                                                        width="70"
-                                                                /></a>
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"><strong>Annual
-                                                                    Report </strong></a><br/>
-                                                                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                                                                >2019&nbsp;- 2020</a><a
-                                                                    href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                                                            ></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                            ><img
-                                                                    alt=""
-                                                                    class="center-block"
-                                                                    height="auto"
-                                                                    src="images/old/download_pdf.png"
-                                                                    width="70"
-                                                            /></a>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                                ><strong>Annual Report </strong></a
-                                                                ><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                                >2018&nbsp;- 2019</a
-                                                                ><a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                                                            ></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
-                                                            ><img
-                                                                    alt=""
-                                                                    class="center-block"
-                                                                    height="auto"
-                                                                    src="images/old/download_pdf.png"
-                                                                    width="70"/></a>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
-                                                                ><strong>Annual Report </strong></a
-                                                                ><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
-                                                                >2017 - 2018</a
-                                                                ><a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
-                                                            ></a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
-                                                            ><img
-                                                                    alt=""
-                                                                    class="center-block"
-                                                                    height="auto"
-                                                                    src="images/old/download_pdf.png"
-                                                                    width="70"/></a>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
-                                                                ><strong>Annual Report </strong></a
-                                                                ><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
-                                                                >2016&nbsp;- 2017</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 text-center">
-                                                        <div class="pdcontainer" style="width:150px;">
-                                                            <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"><img
-                                                                    alt=""
-                                                                    class="center-block"
-                                                                    height="auto"
-                                                                    src="images/old/download_pdf.png"
-                                                                    width="70"
-                                                            /></a>
-
-                                                            <p class="text-center">
-                                                                <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"
-                                                                ><strong>Annual Report </strong></a
-                                                                ><br/>
-                                                                <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"
-                                                                >2015-2016</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-
-                                            <!--ANNUAL-RETURN;-->
-
-<!--                                            <div class="col-md-6 text-center">-->
-<!--                                                <div class="col-md-12 text-center">-->
-<!--                                                    <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; text-align: center; width:350px;">-->
-<!--                                                        <b>ANNUAL RETURN</b></h3>-->
-
-<!--                                                    <div class="col-md-6 text-center">-->
-<!--                                                        <div class="pdcontainer" style="width:150px;">-->
-<!--                                                            <img alt=""-->
-<!--                                                                 class="center-block"-->
-<!--                                                                 height="auto"-->
-<!--                                                                 src="images/old/financial_result.png"-->
-<!--                                                                 width="70"/>-->
-<!--                                                            <p class="text-center">-->
-<!--                                                                <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"><b>Annual-->
-<!--                                                                    Return</b></a><br/>-->
-<!--                                                                2022-2023<a-->
-<!--                                                                    href="http://www.artefactprojects.com/Form_MGT_7_2022-23.pdf"></a>-->
-<!--                                                            </p>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-
-<!--                                                    <div class="col-md-6 text-center">-->
-<!--                                                        <div class="pdcontainer"-->
-<!--                                                             style="margin-left: 120px; width:150px;">-->
-<!--                                                            <img alt=""-->
-<!--                                                                 class="center-block"-->
-<!--                                                                 height="auto"-->
-<!--                                                                 src="images/old/financial_result.png"-->
-<!--                                                                 width="70"/>-->
-<!--                                                            <p class="text-center">-->
-<!--                                                                <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"><b>Annual-->
-<!--                                                                    Return</b></a-->
-<!--                                                                ><br/>-->
-<!--                                                                2021-2022<a-->
-<!--                                                                    href="http://www.artefactprojects.com/Form_MGT_7_2021-22.pdf"></a>-->
-<!--                                                            </p>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-
-<!--                                                    <div class="col-md-6 text-center">-->
-<!--                                                        <div class="pdcontainer" style="width:150px;">-->
-<!--                                                            <img alt=""-->
-<!--                                                                 class="center-block"-->
-<!--                                                                 height="auto"-->
-<!--                                                                 src="images/old/financial_result.png"-->
-<!--                                                                 width="70"/>-->
-<!--                                                            <p class="text-center">-->
-<!--                                                                <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"><b>Annual-->
-<!--                                                                    Return</b><br/>-->
-<!--                                                                    2020-2021</a>-->
-<!--                                                            </p>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-
-<!--                                                    <div class="col-md-6 text-center">-->
-<!--                                                        <div class="pdcontainer"-->
-<!--                                                             style="margin-left: 120px; width:150px;">-->
-<!--                                                            <img alt=""-->
-<!--                                                                 class="center-block"-->
-<!--                                                                 height="auto"-->
-<!--                                                                 src="images/old/financial_result.png"-->
-<!--                                                                 width="70"/>-->
-<!--                                                            <p class="text-center">-->
-<!--                                                                <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"><b>Annual-->
-<!--                                                                    Return</b><br/>-->
-<!--                                                                    2019-2020</a>-->
-<!--                                                            </p>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-3">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                                                <b>FINANCIAL RESULT QUARTERLY</b></h3>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"/>
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf"><strong>Financial
-                                                        Result Quarterly </strong></a><br/>
-                                                    <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf">Sep&nbsp;2023</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf"
-                                                    >June&nbsp;2023</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"/>
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf"
-                                                    >Mar 2023</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf"
-                                                    >Dec&nbsp;2022</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf"
-                                                    >Sep&nbsp;2022</a>
-
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a><br/>
-                                                    <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf"
-                                                    >June&nbsp;2022</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf"
-                                                    >Mar 2022</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf"
-                                                    >Dec 2021</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img alt=""
-                                                     class="center-block"
-                                                     height="auto"
-                                                     src="images/old/financial_result.png"
-                                                     width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a><br/>
-                                                    <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf"
-                                                    >Sep 2021</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf"
-                                                    >Sep 2020</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf"
-                                                    >June 2021</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf"
-                                                    >March 2021</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf"
-                                                    >Dec 2020</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf"
-                                                    >June 2020</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf"
-                                                    ><strong>Financial Result Quarterly </strong></a
-                                                    ><br/>
-                                                    <u
-                                                    ><a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf"
-                                                    >March 2020</a
-                                                    ></u
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Results_31.12.2019.pdf"
-                                                    ><strong>Financial Result Quarterly </strong
-                                                    ><br/>Dec 2019</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Results_30.09.2019.pdf"
-                                                    ><strong>Financial Result Quarterly </strong
-                                                    ><br/>
-                                                        Sep 2019
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Results_30.06.2019.pdf"
-                                                    ><strong>Financial Result Quarterly </strong
-                                                    ><br/>
-                                                        June 2019
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Results_31.03.2019.pdf"
-                                                    ><strong>Financial Result Quarterly </strong
-                                                    ><br/>
-                                                        Mar 2019
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Results_31.12.2018.pdf"
-                                                    ><strong>Financial Result Quarterly </strong
-                                                    ><br/>
-                                                        Dec 2018
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                />
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Results_30.09.2018.pdf"
-                                                    ><strong>Financial Result Quarterly </strong
-                                                    ><br/>
-                                                        Sep 2018
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- SCRUTINIZER-REPORTS-->
-
-                                <div class="col-md-4 col-sm-3">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                                                <b>SCRUTINIZER REPORTS</b></h3>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a
-                                                        href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf"
-                                                    ><strong>Scrutinizers Report</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf"
-                                                    >2023</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf"
-                                                    ><strong>Scrutinizers Report</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf"
-                                                    >2022</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer Report_2021.pdf"
-                                                    ><strong>Scrutinizers Report</strong><br/>
-                                                        2021</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer Report_2020.pdf"
-                                                    ><strong>Scrutinizers Report</strong><br/>
-                                                        2020</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                    ><strong>Scrutinizers Report</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                                                    >2019</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
-                                                    ><strong>Scrutinizers Report</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
-                                                    >2018</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
-                                                    ><strong>Scrutinizers EGM Report</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
-                                                    >2019</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/green_pdf.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf"
-                                                    ><strong>Scrutinizers Report</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf.pdf"
-                                                    >2017</a
-                                                    >
-                                                </p>
-
-                                                <p class="text-center"></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="clear"></div>
-
-                                        <div class="col-md-12">
-                                            <br/>
-                                            <script type="text/javascript">
-                                                var _mcq = ["2", "4153463032"];
-                                            </script>
-                                            <script
-                                                    language="JavaScript"
-                                                    src="http://stat1.moneycontrol.com/mcjs/common/mc_widget.js"
-                                            ></script>
-                                            <noscript
-                                            >
-                                                <a href="http://www.moneycontrol.com/india/stockpricequote/financegeneral/artefactprojects/AP32"
-                                                >Artefact Projects</a
-                                                ></noscript
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- ANNUAL-RETURN-REPORTS-->
-                                <div class="col-md-4 col-sm-3">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                                                <b>ANNUAL RETURN</b></h3>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
-                                                    ><strong>Annual Return</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
-                                                    >2022-2023</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
-                                                    ><strong>Annual Return</strong></a
-                                                    ><br/>
-                                                    <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
-                                                    >2021-2022</a
-                                                    >
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"
-                                                    ><strong>Annual Return</strong><br/>
-                                                        2020-2021</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 text-center">
-                                            <div class="pdcontainer" style="width:150px;">
-                                                <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"
-                                                ><img
-                                                        alt=""
-                                                        class="center-block"
-                                                        height="auto"
-                                                        src="images/old/financial_result.png"
-                                                        width="70"
-                                                /></a>
-
-                                                <p class="text-center">
-                                                    <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"
-                                                    ><strong>Annual Return</strong><br/>
-                                                        2019-2020</a>
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="clear"></div>
-
-                                        <div class="col-md-12">
-                                            <br/>
-                                            <script type="text/javascript">
-                                                var _mcq = ["2", "4153463032"];
-                                            </script>
-                                            <script
-                                                    language="JavaScript"
-                                                    src="http://stat1.moneycontrol.com/mcjs/common/mc_widget.js"
-                                            ></script>
-                                            <noscript
-                                            >
-                                                <a href="http://www.moneycontrol.com/india/stockpricequote/financegeneral/artefactprojects/AP32"
-                                                >Artefact Projects</a
-                                                ></noscript
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <br/>
-                        &nbsp;
-                    </div>
+                <div class="col-md-12" style="position: relative;">
+                    <input id="searchInput" onkeyup="searchReports()"
+                           placeholder="&#x1F50D; Search for year..."
+                           style="width: 100%;
+                        padding: 12px 20px 12px 40px;
+                        margin: 8px 0;
+                        box-sizing: border-box;
+                        border: 2px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        background-color: #f8f8f8;
+                        color: #333;" type="text">
                 </div>
             </div>
         </div>
+        <br>
+
+        <div class="custom-section">
+            <div class="row">
+                <!-- Annual Reports -->
+                <div class="column">
+                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+                        <b>ANNUAL REPORTS</b>
+                    </h3><br>
+                    <ul class="report-list">
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
+                            >2022 - 2023</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf"
+                            >2021 - 2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
+                            >2020&nbsp;- 2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
+                            >2018&nbsp;- 2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
+                            >2019&nbsp;- 2020</a>
+                        </li>
+                        <li><a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
+                        >2020&nbsp;- 2021</a></li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf">2019&nbsp;- 2020</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
+                            >2018&nbsp;- 2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
+                            >2017 - 2018</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
+                            >2016&nbsp;- 2017</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"
+                            >2015-2016</a>
+                        </li>
+
+                        <!-- More Annual Reports -->
+                    </ul>
+                </div>
+
+                <!-- Financial Results -->
+                <div class="column">
+                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+                        <b>FINANCIAL RESULT QUARTERLY</b>
+                    </h3><br>
+                    <ul class="report-list">
+                        <li>
+                            <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf">Sep&nbsp;2023</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf"
+                            >June&nbsp;2023</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf"
+                            >Mar 2023</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf"
+                            >Dec&nbsp;2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf"
+                            >Sep&nbsp;2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf"
+                            >June&nbsp;2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf"
+                            >Mar 2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf"
+                            >Dec 2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf"
+                            >Sep 2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf"
+                            >Sep 2020</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf"
+                            >June 2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf"
+                            >March 2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf"
+                            >Dec 2020</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf"
+                            >June 2020</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf"
+                            >March 2020</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Results_31.12.2019.pdf"
+                            >Dec 2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Results_30.09.2019.pdf"
+                            >Sep 2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Results_30.06.2019.pdf"
+                            >June 2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Results_31.03.2019.pdf"
+                            >Mar 2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Results_31.12.2018.pdf"
+                            >Dec 2018</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Results_30.09.2018.pdf"
+                            >Sep 2018</a>
+                        </li>
+                        <!-- More Financial Results -->
+                    </ul>
+                </div>
+
+                <!-- Scrutinizer Reports -->
+                <div class="column">
+                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+                        <b>SCRUTINIZER REPORTS</b>
+                    </h3><br>
+                    <ul class="report-list">
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf"
+                            >2023</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf"
+                            >2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer Report_2021.pdf"
+                            >2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer Report_2020.pdf"
+                            >2020</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
+                            >2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
+                            >2018</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
+                            >2019</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf.pdf"
+                            >2017</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Annual Return -->
+                <div class="column">
+                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+                        <b>ANNUAL RETURN</b>
+                    </h3><br>
+                    <ul class="report-list">
+                        <li>
+                            <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
+                            >2022-2023</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
+                            >2021-2022</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"
+                            >2020-2021</a>
+                        </li>
+                        <li>
+                            <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"
+                            >2019-2020</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
-    <div class="btmgreybg"></div>
+
 </div>
 
 <!--    Add sections here-->
@@ -1315,7 +521,8 @@
                                         class="fa fa-twitter"></i> </a>&nbsp;
                                 <a href="http://www.artefactprojects.com/" target="_blank"> <i
                                         class="fa fa-google-plus"></i> </a>&nbsp;
-                                <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825" target="_blank">
+                                <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825"
+                                   target="_blank">
                                     <i class="fa fa-linkedin"></i> </a>
                             </div>
                         </div>
@@ -1354,7 +561,8 @@
                                     <u>Email:</u>&nbsp;&nbsp;
                                     <b>artefactngp@artefactprojects.com</b><br><br>
                                     <u>Contact No:</u>&nbsp;&nbsp;
-                                    <b>+91-712-7197100</b></p>
+                                    <b>+91-712-7197100</b>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1371,7 +579,8 @@
                                         R. K. Puram Sector-6,<br> New Delhi - 110022<br><br>
                                         <u>Email:</u>&nbsp;&nbsp;
                                         <b>business@renaissanceiot.com</b><br><br>
-                                        <u>Contact No:</u><b> +91-11-26160357</b></p>
+                                        <u>Contact No:</u><b> +91-11-26160357</b>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1424,62 +633,37 @@
 <script src="src/skdslider.js" type="text/javascript"></script>
 <script src="js/smallmenuscript.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-      jQuery("#demo").skdslider({
-        delay: 5000,
-        fadeSpeed: 3000,
-        showNextPrev: true,
-        showPlayButton: false,
-        autoStart: true,
-      });
-    });
-</script>
-<script>
-    $("#myTab li:nth-child(2) a").tab("show");
-    $(".alltabs").mouseleave(function () {
-      $("#myTab li:nth-child(2) a").tab("show");
-    });
-    $('.nav-tabs[data-toggle="tab-hover"] > li > a').click(function () {
-      $(this).tab("show");
-    });
-</script>
-<script>
-    function centerModal() {
-      $(this).css("display", "block");
-      var $dialog = $(this).find(".modal-dialog");
-      var offset = ($(window).height() - $dialog.height()) / 2;
-      // Center modal vertically in window
-      $dialog.css("margin-top", offset);
-    }
-
-    $(".modal").on("show.bs.modal", centerModal);
-    $(window).on("resize", function () {
-      $(".modal:visible").each(centerModal);
-    });
-</script>
 
 <script>
     function searchReports() {
-    // Get the search input value
-    var input = document.getElementById("searchInput");
-    var filter = input.value.toUpperCase();
+        // Get the input value and convert to uppercase for case-insensitive search
+        var input = document.getElementById("searchInput").value.toUpperCase();
 
-    // Get all the financial report containers
-    var reports = document.querySelectorAll(".pdcontainer");
+        // Get all the <ul> elements with class 'report-list' (this includes all categories of reports)
+        var reportLists = document.querySelectorAll(".report-list");
 
-    // Loop through the reports and hide those that don't match the search query
-    reports.forEach(function(report) {
-        var year = report.innerText || report.textContent;
-        if (year.toUpperCase().indexOf(filter) > -1) {
-            report.style.display = "";
-        } else {
-            report.style.display = "none";
-        }
-    });
-}
+        // Loop through each <ul> (report-list)
+        reportLists.forEach(function(reportList) {
+            // Get all the <li> elements inside each report list
+            var listItems = reportList.getElementsByTagName("li");
 
+            // Loop through each <li>
+            for (var i = 0; i < listItems.length; i++) {
+                var a = listItems[i].getElementsByTagName("a")[0];
+
+                // Check if the content of the <a> tag contains the search value
+                if (a.innerHTML.toUpperCase().indexOf(input) > -1) {
+                    // If the report matches the search query, show the <li>
+                    listItems[i].style.display = "";
+                } else {
+                    // Otherwise, hide the <li>
+                    listItems[i].style.display = "none";
+                }
+            }
+        });
+    }
 </script>
+
 </body>
 
 </html>
