@@ -3,288 +3,394 @@
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <style>
-    * {
-      box-sizing: border-box;
-    }
+        * {
+          box-sizing: border-box;
+        }
 
-    /* Container for flexboxes */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; /* Ensure equal spacing between columns */
-    }
+        /* Container for flexboxes */
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; /* Ensure equal spacing between columns */
+        }
 
-    /* Create four equal columns */
-    .column {
-      flex: 1 1 22%; /* Flex-grow: 1; Flex-shrink: 1; Flex-basis: 22% to ensure 4 equal columns */
-      padding: 20px;
-      border: 2px solid #003978;
-      border-radius: 8px;
-      background-color: #f5f5f5;
-      margin: 10px;
-      min-width: 250px; /* Minimum width to avoid too small columns */
-    }
+        /* Create four equal columns */
+        .column {
+          flex: 1 1 22%; /* Flex-grow: 1; Flex-shrink: 1; Flex-basis: 22% to ensure 4 equal columns */
+          padding: 20px;
+          border: 2px solid #003978;
+          border-radius: 8px;
+          background-color: #f5f5f5;
+          margin: 10px;
+          min-width: 250px; /* Minimum width to avoid too small columns */
+        }
 
-    ul {
-        list-style: none; /* Remove default bullets */
-        padding: 0;
-        text-align: center;
-        margin: 0;
-        font-family: 'Arial', sans-serif; /* Use a clean, professional font */
-    }
+        ul {
+            list-style: none; /* Remove default bullets */
+            padding: 0;
+            text-align: center;
+            margin: 0;
+            font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+        }
 
-    ul li {
-        margin-bottom: 10px; /* Add space between list items */
-        font-size: 16px; /* Adjust font size */
-    }
+        ul li {
+            margin-bottom: 10px; /* Add space between list items */
+            font-size: 16px; /* Adjust font size */
+        }
 
-    ul li a {
-        text-decoration: none; /* Remove underline */
-        color: #333; /* Set a professional text color */
-        background-color: #f9f9f9; /* Light background for the link */
-        padding: 8px 12px; /* Add padding to the links */
-        border: 1px solid #ddd; /* Light border for links */
-        border-radius: 5px; /* Rounded corners for a smooth look */
-        display: inline-block; /* Keep the link inline but allow padding */
-        transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
-    }
+        ul li a {
+            text-decoration: none; /* Remove underline */
+            color: #333; /* Set a professional text color */
+            background-color: #f9f9f9; /* Light background for the link */
+            padding: 8px 12px; /* Add padding to the links */
+            border: 1px solid #ddd; /* Light border for links */
+            border-radius: 5px; /* Rounded corners for a smooth look */
+            display: inline-block; /* Keep the link inline but allow padding */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+        }
 
-    ul li a:hover {
-        background-color: #007BFF; /* Change background color on hover */
-        color: #fff; /* Change text color on hover */
-        border-color: #007BFF; /* Match border with the hover background */
-    }
+        ul li a:hover {
+            background-color: #007BFF; /* Change background color on hover */
+            color: #fff; /* Change text color on hover */
+            border-color: #007BFF; /* Match border with the hover background */
+        }
 
-    /* On screens that are 992px wide or less, go from four columns to two columns */
-    @media screen and (max-width: 992px) {
-      .column {
-        flex: 1 1 45%; /* Adjust flex-basis to allow two columns on medium screens */
-      }
-    }
+        /* On screens that are 992px wide or less, go from four columns to two columns */
+        @media screen and (max-width: 992px) {
+          .column {
+            flex: 1 1 45%; /* Adjust flex-basis to allow two columns on medium screens */
+          }
+        }
 
-    /* On screens that are 600px wide or less, make the columns stack on top of each other */
-    @media screen and (max-width: 600px) {
-      .column {
-        flex: 1 1 100%; /* Stack columns vertically */
-        margin: 10px 0; /* Adjust margin for vertical stacking */
-      }
-    }
-</style>
+        /* On screens that are 600px wide or less, make the columns stack on top of each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            flex: 1 1 100%; /* Stack columns vertically */
+            margin: 10px 0; /* Adjust margin for vertical stacking */
+          }
+        }
+    </style>
 
 </head>
 <body>
 
+<div class="slider-container">
+    <!-- Slide 1 -->
+    <div class="slide" style="background: url(images/slider/bg/1.jpg) no-repeat center center/cover;">
+        <div class="content">
+            <p class="slider-text">Located on National Highway 62, the Beer Mandi Toll Plaza,<br> managed by the National Highway Authority of India.</p>
+        </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" style="background: url(images/slider/bg/4.jpg) no-repeat center center/cover;">
+        <div class="content">
+            <p class="slider-text">National Highway 52 is the fourth longest National Highway in India. <br> It connects Sangrur, Punjab to Ankola, Karnataka.</p>
+        </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide" style="background: url(images/slider/bg/2.jpeg) no-repeat center center/cover;">
+        <div class="content">
+            <p class="slider-text">Trivandrum International Airport has direct flights to cities like Kuwait,<br> Dubai, Kuala Lumpur, Singapore.</p>
+        </div>
+    </div>
+</div>
+<style>
+    /* Slider Container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Each Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active Slide */
+.active {
+    opacity: 1;
+}
+
+/* Text Styling */
+.slider-text {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+</style>
+<script>
+    let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000); // Slide every 3 seconds
+
+// Initially show the first slide
+showSlide(currentSlide);
+
+</script>
 
 <div class="row">
     <div class="column">
-        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-            <b>ANNUAL REPORTS</b></h3><br>
-        <ul>
-            <li>
-                <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
-                >2022 - 2023</a>
+        <h3 align="center"
+            onclick="toggleDropdown('annualReportsDropdown')"
+            style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; cursor: pointer; position: relative;">
+            <b>ANNUAL REPORTS</b>
+            <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 16px;">&#9662;</span>
+        </h3>
+        <ul id="annualReportsDropdown" style="display: none; list-style-type: none; padding: 0; margin: 0;">
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf" style="color: #003978;">2022 -
+                    2023</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf"
-                >2021 - 2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf" style="color: #003978;">2021 -
+                    2022</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                >2020&nbsp;- 2021</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf" style="color: #003978;">2020&nbsp;-
+                    2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                >2018&nbsp;- 2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf" style="color: #003978;">2018&nbsp;-
+                    2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                >2019&nbsp;- 2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf" style="color: #003978;">2019&nbsp;-
+                    2020</a>
             </li>
-            <li><a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-            >2020&nbsp;- 2021</a></li>
-            <li>
-                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf">2019&nbsp;- 2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf" style="color: #003978;">2020&nbsp;-
+                    2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                >2018&nbsp;- 2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf" style="color: #003978;">2019&nbsp;-
+                    2020</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
-                >2017 - 2018</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf" style="color: #003978;">2018&nbsp;-
+                    2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
-                >2016&nbsp;- 2017</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf" style="color: #003978;">2017 -
+                    2018</a>
             </li>
-            <li>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf" style="color: #003978;">2016&nbsp;-
+                    2017</a>
+            </li>
+            <li style="padding: 5px 0;">
                 <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"
-                >2015-2016</a>
+                   style="color: #003978;">2015-2016</a>
             </li>
-
         </ul>
-        
     </div>
 
+
     <div class="column">
-        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+        <h3 align="center"
+            onclick="toggleDropdown('financialDropdown')"
+            style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; cursor: pointer; position: relative;">
             <b>FINANCIAL RESULT QUARTERLY</b>
+            <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 16px;">&#9662;</span>
         </h3>
-        <ul>
-            <li>
-                <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf">Sep&nbsp;2023</a>
+        <ul id="financialDropdown" style="display: none; list-style-type: none; padding: 0; margin: 0;">
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf" style="color: #003978;">Sep&nbsp;2023</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf"
-                >June&nbsp;2023</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf" style="color: #003978;">June&nbsp;2023</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf"
-                >Mar 2023</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf" style="color: #003978;">Mar
+                    2023</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf"
-                >Dec&nbsp;2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf" style="color: #003978;">Dec&nbsp;2022</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf"
-                >Sep&nbsp;2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf" style="color: #003978;">Sep&nbsp;2022</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf"
-                >June&nbsp;2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf" style="color: #003978;">June&nbsp;2022</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf"
-                >Mar 2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf" style="color: #003978;">Mar
+                    2022</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf"
-                >Dec 2021</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf" style="color: #003978;">Dec
+                    2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf"
-                >Sep 2021</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf" style="color: #003978;">Sep
+                    2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf"
-                >Sep 2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf" style="color: #003978;">Sep
+                    2020</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf"
-                >June 2021</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf" style="color: #003978;">June
+                    2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf"
-                >March 2021</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf" style="color: #003978;">March
+                    2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf"
-                >Dec 2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf" style="color: #003978;">Dec
+                    2020</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf"
-                >June 2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf" style="color: #003978;">June
+                    2020</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf"
-                >March 2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf" style="color: #003978;">March
+                    2020</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Results_31.12.2019.pdf"
-                >Dec 2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Results_31.12.2019.pdf" style="color: #003978;">Dec 2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Results_30.09.2019.pdf"
-                >Sep 2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Results_30.09.2019.pdf" style="color: #003978;">Sep 2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Results_30.06.2019.pdf"
-                >June 2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Results_30.06.2019.pdf" style="color: #003978;">June 2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Results_31.03.2019.pdf"
-                >Mar 2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Results_31.03.2019.pdf" style="color: #003978;">Mar 2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Results_31.12.2018.pdf"
-                >Dec 2018</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Results_31.12.2018.pdf" style="color: #003978;">Dec 2018</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Results_30.09.2018.pdf"
-                >Sep 2018</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Results_30.09.2018.pdf" style="color: #003978;">Sep 2018</a>
             </li>
         </ul>
-        
     </div>
 
+
     <div class="column">
-        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+        <h3 align="center"
+            onclick="toggleDropdown('scrutinizerDropdown')"
+            style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; cursor: pointer; position: relative;">
             <b>SCRUTINIZER REPORTS</b>
+            <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 16px;">&#9662;</span>
         </h3>
-        <ul>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf"
-                >2023</a>
+        <ul id="scrutinizerDropdown" style="display: none; list-style-type: none; padding: 0; margin: 0;">
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf" style="color: #003978;">2023</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf"
-                >2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf" style="color: #003978;">2022</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer Report_2021.pdf"
-                >2021</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer Report_2021.pdf" style="color: #003978;">2021</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer Report_2020.pdf"
-                >2020</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer Report_2020.pdf" style="color: #003978;">2020</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                >2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf" style="color: #003978;">2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
-                >2018</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf" style="color: #003978;">2018</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
-                >2019</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf" style="color: #003978;">2019</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf.pdf"
-                >2017</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf.pdf" style="color: #003978;">2017</a>
             </li>
-
         </ul>
-        
     </div>
+
 
     <div class="column">
-        <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
+        <h3 align="center"
+            onclick="toggleDropdown('dropdown')"
+            style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; cursor: pointer; position: relative;">
             <b>ANNUAL RETURN</b>
+            <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 16px;">&#9662;</span>
         </h3>
-        <ul>
-            <li>
-                <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
-                >2022-2023</a>
+        <ul id="dropdown" style="display: none; list-style-type: none; padding: 0; margin: 0;">
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf" style="color: #003978;">2022-2023</a>
             </li>
-            <li>
-                <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
-                >2021-2022</a>
+            <li style="padding: 5px 0;">
+                <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf" style="color: #003978;">2021-2022</a>
             </li>
-            <li>
+            <li style="padding: 5px 0;">
                 <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"
-                >2020-2021</a>
+                   style="color: #003978;">2020-2021</a>
             </li>
-            <li>
+            <li style="padding: 5px 0;">
                 <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"
-                >2019-2020</a>
+                   style="color: #003978;">2019-2020</a>
             </li>
         </ul>
-        
     </div>
+
+
+<!--    <script>-->
+<!--        function toggleDropdown(dropdownId) {-->
+<!--            var dropdown = document.getElementById(dropdownId);-->
+<!--            if (dropdown.style.display === "none" || dropdown.style.display === "") {-->
+<!--                dropdown.style.display = "block";-->
+<!--            } else {-->
+<!--                dropdown.style.display = "none";-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+
+    <script>
+    function toggleDropdown(dropdownId) {
+        // Hide all dropdowns
+        const dropdowns = document.querySelectorAll('ul');
+        dropdowns.forEach(dropdown => dropdown.style.display = 'none');
+
+        // Toggle the clicked dropdown
+        var dropdown = document.getElementById(dropdownId);
+        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+            dropdown.style.display = "block";
+        } else {
+            dropdown.style.display = "none";
+        }
+    }
+</script>
+
 </div>
+
 
 </body>
 </html>

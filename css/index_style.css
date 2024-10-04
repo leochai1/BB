@@ -1,5 +1,42 @@
+        /* Slider Container */
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+    }
 
-        .latest-news-section {
+    /* Each Slide */
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    /* Active Slide */
+    .active {
+        opacity: 1;
+    }
+
+    /* Text Styling */
+    .slider-text {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Arial', sans-serif;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+.latest-news-section {
     background-color: #f9f9f9;
     padding: 20px 0;
 }

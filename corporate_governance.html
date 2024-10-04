@@ -126,8 +126,7 @@
                                 <li><a href="index.html">HOME</a></li>
                                 <li class="drop"><a href="aboutus.html">ABOUT&nbsp;US</a>
                                     <ul class="dropdown">
-                                        <li><a href="aboutus.html#chairman-message">CHAIRMAN'S DESK</a></li>
-                                        <li><a href="aboutus.html#history">HISTORY</a></li>
+                                        <li><a href="aboutus.html">HISTORY</a></li>
                                         <li><a href="company_profile.html">COMPANY PROFILE</a></li>
                                         <li><a href="industry_outlook.html">INDUSTRY OUTLOOK</a></li>
                                     </ul>
@@ -169,8 +168,7 @@
                                     <li><a href="index.html">HOME</a></li>
                                     <li class="drop"><a href="aboutus.html">ABOUT&nbsp;US</a>
                                         <ul class="dropdown">
-                                            <li><a href="aboutus.html#chairman-message">CHAIRMAN'S DESK</a></li>
-                                            <li><a href="aboutus.html#history">HISTORY</a></li>
+                                            <li><a href="aboutus.html">HISTORY</a></li>
                                             <li><a href="company_profile.html">COMPANY PROFILE</a></li>
                                             <li><a href="industry_outlook.html">INDUSTRY OUTLOOK</a></li>
                                         </ul>
@@ -186,8 +184,7 @@
                                     <li class="drop"><a href="corporate_governance.html">INVESTOR&nbsp;SERVICES</a>
                                         <ul class="dropdown">
                                             <li><a href="corporate_governance.html">CORPORATE GOVERNANCE</a></li>
-                                            <li><a href="corporate_governance.html#codeOfCondct">CODE OF CONDUCT</a>
-                                            </li>
+
                                             <li><a href="share_holding.html">SHARE HOLDING</a></li>
                                             <li><a href="financial_performance.html">FINANCIAL PERFORMANCE</a></li>
                                             <li><a href="financials.html">FINANCIAL REPORT</a></li>
@@ -383,40 +380,310 @@
                             assist the Board in discharging its responsibilities
                         </p><br>
 
-                        <p><strong>Commitees</strong></p>
+                        <p><strong>Commitees:</strong></p>
 
-                        <ul class="bulls">
-                            <li>
-                                <a>Audit Committee
-                                    <select style="width:20px;">
-                                        <option>COMPOSITION OF AUDIT COMMITTEE:</option>
-                                        <option>1. Mr. Sandeep Batta</option>
-                                        <option>2. Mrs. Ankita Shah</option>
-                                        <option>3. Mr. Kaustubh Paunikar</option>
-                                    </select></a>
-                            </li>
-                            <li>
-                                <a>Stakeholders&rsquo;
-                                    Relationship Committee
-                                    <select style="width:20px;">
-                                        <option>STAKEHOLDERS’ RELATIONSHIP COMMITTEE:</option>
-                                        <option>1. Mr. Sandeep Batta</option>
-                                        <option>2. Mrs. Ankita Shah</option>
-                                        <option>3. Mr. Kaustubh Paunikar</option>
-                                    </select>
-                                </a>
-                            </li>
-                            <li>
-                                <a>Nomination and Remuneration Committee
-                                    <select style="width:20px;">
-                                        <option>COMPOSITION OF NOMINATION AND REMUNERATION COMMITTEE:</option>
-                                        <option>1. Mr. Sandeep Batta</option>
-                                        <option>2. Mrs. Ankita Shah</option>
-                                        <option>3. Mr. Kaustubh Paunikar</option>
-                                    </select>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="select-wrapper">
+                            <div class="select">
+                                <div class="select__trigger"><span>AUDIT COMMITTEE</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected">COMPOSITION OF NOMINATION AND REMUNERATION COMMITTEE:</span>
+                                    <span class="custom-option">1. Mr. Sandeep Batta</span>
+                                    <span class="custom-option">2. Mrs. Ankita Shah</span>
+                                    <span class="custom-option">3. Mr. Kaustubh Paunikar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="select-wrapper">
+                            <div class="select">
+                                <div class="select__trigger"><span>Stakeholders
+                                    Relationship Committee</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected">STAKEHOLDERS’ RELATIONSHIP COMMITTEE:</span>
+                                    <span class="custom-option">1. Mr. Sandeep Batta</span>
+                                    <span class="custom-option">2. Mrs. Ankita Shah</span>
+                                    <span class="custom-option">3. Mr. Kaustubh Paunikar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="select-wrapper">
+                            <div class="select">
+                                <div class="select__trigger"><span>Nomination and Remuneration Committee</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="custom-options">
+                                    <span class="custom-option selected">COMPOSITION OF NOMINATION AND REMUNERATION COMMITTEE:</span>
+                                    <span class="custom-option">1. Mr. Sandeep Batta</span>
+                                    <span class="custom-option">2. Mrs. Ankita Shah</span>
+                                    <span class="custom-option">3. Mr. Kaustubh Paunikar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .select-wrapper {
+                                position: relative;
+                                user-select: none;
+                                width: 80%;
+                                max-width: 600px;
+
+                            }
+
+                            .select {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                border-width: 0 2px 0 2px;
+                                border-style: solid;
+                                border-color: #394a6d;
+                                width: 100%;
+                            }
+
+                            .select__trigger {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 0 22px;
+                                font-size: 15px;
+                                font-weight: 300;
+                                color: #3b3b3b;
+                                height: 40px;
+                                background: #ffffff;
+                                cursor: pointer;
+                                border-width: 2px 0 2px 0;
+                                border-style: solid;
+                                border-color: #394a6d;
+                            }
+
+                            .custom-options {
+                                position: absolute;
+                                display: block;
+                                top: 100%;
+                                left: 0;
+                                right: 0;
+                                border: 2px solid #394a6d;
+                                border-top: 0;
+                                background: #fff;
+                                transition: all 0.5s;
+                                opacity: 0;
+                                visibility: hidden;
+                                pointer-events: none;
+                                z-index: 2;
+                            }
+
+                            .select.open .custom-options {
+                                opacity: 1;
+                                visibility: visible;
+                                pointer-events: all;
+                            }
+
+                            .custom-option {
+                                position: relative;
+                                display: block;
+                                padding: 10px 22px;
+                                font-size: 15px;
+                                font-weight: 300;
+                                color: #3b3b3b;
+                                line-height: 30px;
+                                cursor: pointer;
+                                transition: all 0.5s;
+                            }
+
+                            .custom-option:hover {
+                                cursor: pointer;
+                                background-color: #b2b2b2;
+                            }
+
+                            .custom-option.selected {
+                                color: #ffffff;
+                                background-color: #305c91;
+                            }
+
+                            .arrow {
+                                position: relative;
+                                height: 13px;
+                                width: 10px;
+                            }
+
+                            .arrow::before,
+                            .arrow::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                width: 0.15rem;
+                                height: 100%;
+                                transition: all 0.5s;
+                            }
+
+                            .arrow::before {
+                                left: -5px;
+                                transform: rotate(45deg);
+                                background-color: #394a6d;
+                            }
+
+                            .arrow::after {
+                                left: 5px;
+                                transform: rotate(-45deg);
+                                background-color: #394a6d;
+                            }
+
+                            .open .arrow::before {
+                                left: -5px;
+                                transform: rotate(-45deg);
+                            }
+
+                            .open .arrow::after {
+                                left: 5px;
+                                transform: rotate(45deg);
+                            }
+
+                            /* Media Queries for Responsiveness */
+
+                            /* For small devices (phones) */
+                            @media (max-width: 576px) {
+                                .select-wrapper {
+                                    width: 90%;
+                                }
+
+                                .select__trigger {
+                                    font-size: 13px;
+                                    padding: 0 16px;
+                                }
+
+                                .custom-option {
+                                    font-size: 13px;
+                                    padding: 8px 16px;
+                                }
+                            }
+
+                            /* For medium devices (tablets) */
+                            @media (max-width: 768px) {
+                                .select-wrapper {
+                                    width: 85%;
+                                }
+
+                                .select__trigger {
+                                    font-size: 14px;
+                                    padding: 0 18px;
+                                }
+
+                                .custom-option {
+                                    font-size: 14px;
+                                    padding: 9px 18px;
+                                }
+                            }
+
+                            /* For large devices (desktops and laptops) */
+                            @media (min-width: 992px) {
+                                .select-wrapper {
+                                    width: 75%;
+                                }
+
+                                .select__trigger {
+                                    font-size: 16px;
+                                    padding: 0 24px;
+                                }
+
+                                .custom-option {
+                                    font-size: 16px;
+                                    padding: 10px 24px;
+                                }
+                            }
+
+                        </style>
+
+                        <script>
+                            document.querySelectorAll('.select-wrapper').forEach(wrapper => {
+                                wrapper.addEventListener('click', function() {
+                                    // Close all other open dropdowns
+                                    document.querySelectorAll('.select').forEach(select => {
+                                        if (select !== this.querySelector('.select')) {
+                                            select.classList.remove('open');
+                                        }
+                                    });
+
+                                    // Toggle current dropdown
+                                    this.querySelector('.select').classList.toggle('open');
+                                });
+                            });
+                        </script>
+
+                        <!--                        <script>-->
+                        <!--                            // Select all select-wrapper elements-->
+                        <!--                            document.querySelectorAll('.select-wrapper').forEach(wrapper => {-->
+                        <!--                            wrapper.addEventListener('click', function() {-->
+                        <!--                                this.querySelector('.select').classList.toggle('open');-->
+                        <!--                            });-->
+                        <!--                            });-->
+                        <!--                        </script>-->
+
+                        <!--                        <ul class="bulls">-->
+                        <!--                            <li>-->
+                        <!--                                <select class="styled-select">-->
+                        <!--                                    <option selected>AUDIT COMMITTEE +</option>-->
+                        <!--                                    <option>COMPOSITION OF AUDIT COMMITTEE</option>-->
+                        <!--                                    <option>1. Mr. Sandeep Batta</option>-->
+                        <!--                                    <option>2. Mrs. Ankita Shah</option>-->
+                        <!--                                    <option>3. Mr. Kaustubh Paunikar</option>-->
+                        <!--                                </select>-->
+
+                        <!--                            </li>-->
+
+                        <!--                            <style>-->
+                        <!--                                .styled-select {-->
+
+                        <!--                                    padding: 5px; /* Add some padding */-->
+                        <!--                                    border: 1px solid #ccc; /* Light grey border */-->
+                        <!--                                    border-radius: 5px; /* Rounded corners */-->
+                        <!--                                    background-color: #f9f9f9; /* Light background color */-->
+                        <!--                                    font-size: 16px; /* Font size */-->
+                        <!--                                    color: #333; /* Dark text color */-->
+                        <!--                                    appearance: none; /* Remove default styling in some browsers */-->
+                        <!--                                    cursor: pointer; /* Pointer cursor on hover */-->
+                        <!--                                }-->
+
+                        <!--                                .styled-select:focus {-->
+                        <!--                                    border-color: #007BFF; /* Change border color on focus */-->
+                        <!--                                    outline: none; /* Remove outline */-->
+                        <!--                                }-->
+
+                        <!--                                .styled-select option {-->
+                        <!--                                    padding: 10px; /* Option padding */-->
+                        <!--                                }-->
+                        <!--                            </style>-->
+
+
+                        <!--                            <li>-->
+                        <!--                                <a>Stakeholders&rsquo;-->
+                        <!--                                    Relationship Committee-->
+                        <!--                                    <select style="width:20px;">-->
+                        <!--                                        <option>STAKEHOLDERS’ RELATIONSHIP COMMITTEE:</option>-->
+                        <!--                                        <option>1. Mr. Sandeep Batta</option>-->
+                        <!--                                        <option>2. Mrs. Ankita Shah</option>-->
+                        <!--                                        <option>3. Mr. Kaustubh Paunikar</option>-->
+                        <!--                                    </select>-->
+                        <!--                                </a>-->
+                        <!--                            </li>-->
+                        <!--                            <li>-->
+                        <!--                                <a>Nomination and Remuneration Committee-->
+                        <!--                                    <select style="width:20px;">-->
+                        <!--                                        <option>COMPOSITION OF NOMINATION AND REMUNERATION COMMITTEE:</option>-->
+                        <!--                                        <option>1. Mr. Sandeep Batta</option>-->
+                        <!--                                        <option>2. Mrs. Ankita Shah</option>-->
+                        <!--                                        <option>3. Mr. Kaustubh Paunikar</option>-->
+                        <!--                                    </select>-->
+                        <!--                                </a>-->
+                        <!--                            </li>-->
+                        <!--                        </ul>-->
+
                         &nbsp;<br>
 
                         <p><strong>Other Commitees</strong></p>
@@ -798,8 +1065,7 @@
 
 <!-- Start Footer Area -->
 <footer class="htc__footer__area">
-    <div class="footer__top ptb--130" data--1f2d30__overlay="9.5"
-         style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat fixed center center / cover ;">
+    <div class="footer__top ptb--130" data--1f2d30__overlay="9.5">
         <div class="container">
 
             <div class="row">
