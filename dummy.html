@@ -74,88 +74,6 @@
 </head>
 <body>
 
-<div class="slider-container">
-    <!-- Slide 1 -->
-    <div class="slide" style="background: url(images/slider/bg/1.jpg) no-repeat center center/cover;">
-        <div class="content">
-            <p class="slider-text">Located on National Highway 62, the Beer Mandi Toll Plaza,<br> managed by the National Highway Authority of India.</p>
-        </div>
-    </div>
-    <!-- Slide 2 -->
-    <div class="slide" style="background: url(images/slider/bg/4.jpg) no-repeat center center/cover;">
-        <div class="content">
-            <p class="slider-text">National Highway 52 is the fourth longest National Highway in India. <br> It connects Sangrur, Punjab to Ankola, Karnataka.</p>
-        </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="slide" style="background: url(images/slider/bg/2.jpeg) no-repeat center center/cover;">
-        <div class="content">
-            <p class="slider-text">Trivandrum International Airport has direct flights to cities like Kuwait,<br> Dubai, Kuala Lumpur, Singapore.</p>
-        </div>
-    </div>
-</div>
-<style>
-    /* Slider Container */
-.slider-container {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-}
-
-/* Each Slide */
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-/* Active Slide */
-.active {
-    opacity: 1;
-}
-
-/* Text Styling */
-.slider-text {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Arial', sans-serif;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-</style>
-<script>
-    let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-            slide.classList.add('active');
-        }
-    });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-setInterval(nextSlide, 3000); // Slide every 3 seconds
-
-// Initially show the first slide
-showSlide(currentSlide);
-
-</script>
 
 <div class="row">
     <div class="column">
@@ -361,38 +279,271 @@ showSlide(currentSlide);
     </div>
 
 
-<!--    <script>-->
-<!--        function toggleDropdown(dropdownId) {-->
-<!--            var dropdown = document.getElementById(dropdownId);-->
-<!--            if (dropdown.style.display === "none" || dropdown.style.display === "") {-->
-<!--                dropdown.style.display = "block";-->
-<!--            } else {-->
-<!--                dropdown.style.display = "none";-->
-<!--            }-->
-<!--        }-->
-<!--    </script>-->
-
-
     <script>
-    function toggleDropdown(dropdownId) {
-        // Hide all dropdowns
-        const dropdowns = document.querySelectorAll('ul');
-        dropdowns.forEach(dropdown => dropdown.style.display = 'none');
-
-        // Toggle the clicked dropdown
-        var dropdown = document.getElementById(dropdownId);
-        if (dropdown.style.display === "none" || dropdown.style.display === "") {
-            dropdown.style.display = "block";
-        } else {
-            dropdown.style.display = "none";
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
         }
-    }
-</script>
+    </script>
+
+
+    <!--    <script>-->
+    <!--    function toggleDropdown(dropdownId) {-->
+    <!--        // Hide all dropdowns-->
+    <!--        const dropdowns = document.querySelectorAll('ul');-->
+    <!--        dropdowns.forEach(dropdown => dropdown.style.display = 'none');-->
+
+    <!--        // Toggle the clicked dropdown-->
+    <!--        var dropdown = document.getElementById(dropdownId);-->
+    <!--        if (dropdown.style.display === "none" || dropdown.style.display === "") {-->
+    <!--            dropdown.style.display = "block";-->
+    <!--        } else {-->
+    <!--            dropdown.style.display = "none";-->
+    <!--        }-->
+    <!--    }-->
+    <!--</script>-->
 
 </div>
 
 
 </body>
 </html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Reports Section</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .report_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .report-column {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .dropdown {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .report-list {
+            margin-top: 20px;
+        }
+        .report-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            padding: 5px 10px;
+            background-color: #003978;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .report-column {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="report_container">
+    <!-- Annual Reports -->
+    <div class="report-column">
+        <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; position: relative;">ANNUAL <br>REPORTS</h3>
+        <select class="dropdown" id="annual-reports-select">
+            <option disabled selected value="">Select Financial Year</option>
+            <option value="2022-2023">FY 2022 - 2023</option>
+            <option value="2021-2022">FY 2021 - 2022</option>
+            <option value="2020-2021">FY 2020 - 2021</option>
+            <option value="2019-2020">FY 2019 - 2020</option>
+            <option value="2018-2019">FY 2018 - 2019</option>
+            <option value="2017-2018">FY 2017 - 2018</option>
+            <option value="2016-2017">FY 2016 - 2017</option>
+            <option value="2015-2016">FY 2015 - 2016</option>
+        </select>
+        <div class="report-list" id="annual-reports-list"></div>
+    </div>
+
+    <!-- Financial Results Quarterly -->
+    <div class="report-column">
+        <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; position: relative;">FINANCIAL RESULT QUARTERLY</h3>
+        <select class="dropdown" id="financial-results-select">
+            <option disabled selected value="">Select Quarter Year</option>
+            <option value="Sep-2023">Sep 2023</option>
+            <option value="June-2023">June&nbsp;2023</option>
+            <option value="Mar-2023">Mar 2023</option>
+            <option value="Dec-2022">Dec&nbsp;2022</option>
+            <option value="Sep-2022">Sep&nbsp;2022</option>
+            <option value="June-2022">June&nbsp;2022</option>
+            <option value="Mar-2022">Mar 2022</option>
+            <option value="Dec-2021">Dec 2021</option>
+            <option value="Sep-2021">Sep 2021</option>
+            <option value="June-2021">June 2021</option>
+            <option value="March-2021">March 2021</option>
+            <option value="Dec-2020">Dec 2020</option>
+            <option value="Sep-2020">Sep 2020</option>
+            <option value="June-2020">June 2020</option>
+            <option value="March-2020">March 2020</option>
+            <option value="Dec-2019">Dec 2019</option>
+            <option value="Sep-2019">Sep 2019</option>
+            <option value="June-2019">June 2019</option>
+            <option value="Mar-2019">Mar 2019</option>
+            <option value="Dec-2018">Dec 2018</option>
+            <option value="Sep-2018">Sep 2018</option>
+        </select>
+        <div class="report-list" id="financial-results-list"></div>
+    </div>
+
+
+    <!-- Scrutinizer Reports -->
+    <div class="report-column">
+        <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; position: relative;">SCRUTINIZER <br>REPORTS</h3>
+        <select class="dropdown" id="scrutinizer-reports-select">
+            <option disabled selected value="">Select Year</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+        </select>
+        <div class="report-list" id="scrutinizer-reports-list"></div>
+    </div>
+
+    <!-- Annual Returns -->
+    <div class="report-column">
+        <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; cursor: pointer; position: relative;">ANNUAL<br> RETURN</h3>
+        <select class="dropdown" id="annual-returns-select">
+            <option disabled selected value="">Select Year</option>
+            <option value="2022-2023">2022 - 2023</option>
+            <option value="2021-2022">2021 - 2022</option>
+            <option value="2020-2021">2020 - 2021</option>
+            <option value="2019-2020">2019 - 2020</option>
+        </select>
+        <div class="report-list" id="annual-returns-list"></div>
+    </div>
+</div>
+
+<script>
+    const reportsData = {
+        "annualReports": {
+            "2022-2023": [{ name: "Annual Report 2022 - 2023", file: "http://www.artefactprojects.com/Annual_Report_2022-2023.pdf" }],
+            "2021-2022": [{ name: "Annual Report 2021 - 2022", file: "http://www.artefactprojects.com/Annual_Report_2021-2022.pdf" }],
+            "2020-2021": [{ name: "Annual Report 2020 - 2021", file: "http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf" }],
+            "2019-2020": [{ name: "Annual Report 2019 - 2020", file: "http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf" }],
+            "2018-2019": [{ name: "Annual Report 2018 - 2019", file: "http://www.artefactprojects.com/Annual_Report_2018-19.pdf" }],
+            "2017-2018": [{ name: "Annual Report 2017 - 2018", file: "http://www.artefactprojects.com/Annual_Report_2017-18.pdf" }],
+            "2016-2017": [{ name: "Annual Report 2016 - 2017", file: "http://www.artefactprojects.com/Annual_Report_2016-17.pdf" }],
+            "2015-2016": [{ name: "Annual Report 2015 - 2016", file: "http://www.artefactprojects.com/Annual_Report_2015-16.pdf" }]
+        },
+        "financialResults": {
+            "Sep-2023": [{ name: "Quarterly Financial Results Sep-2023", file: "http://www.artefactprojects.com/Financial Results_30.09.2023.pdf" }],
+            "June-2023": [{ name: "Quarterly Financial Results June-2023", file: "http://www.artefactprojects.com/Financial Results_30.06.2023.pdf" }],
+            "Mar-2023": [{ name: "Quarterly Financial Results Mar-2023", file: "http://www.artefactprojects.com/Financial Results_31.03.2023.pdf" }],
+            "Dec-2022": [{ name: "Quarterly Financial Results Dec-2022", file: "http://www.artefactprojects.com/Financial Results_31.12.2022.pdf" }],
+            "Sep-2022": [{ name: "Quarterly Financial Results Sep-2022", file: "http://www.artefactprojects.com/Financial results_30.09.2022.pdf" }],
+            "June-2022": [{ name: "Quarterly Financial Results June-2022", file: "http://www.artefactprojects.com/Financial Results_30.06.2022.pdf" }],
+            "Mar-2022": [{ name: "Quarterly Financial Results Mar-2022", file: "http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf" }],
+            "Dec-2021": [{ name: "Quarterly Financial Results Dec-2021", file: "http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf" }],
+            "Sep-2021": [{ name: "Quarterly Financial Results Sep-2021", file: "http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf" }],
+            "June-2021": [{ name: "Quarterly Financial Results June-2021", file: "http://www.artefactprojects.com/5 Financial results_June 2021.pdf" }],
+            "March-2021": [{ name: "Quarterly Financial Results March-2021", file: "http://www.artefactprojects.com/4 Financial Results_March 2021.pdf" }],
+            "Dec-2020": [{ name: "Quarterly Financial Results Dec-2020", file: "http://www.artefactprojects.com/3 Financial results_December 2020.pdf" }],
+            "Sep-2020": [{ name: "Quarterly Financial Results Sep-2020", file: "http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf" }],
+            "June-2020": [{ name: "Quarterly Financial Results June-2020", file: "http://www.artefactprojects.com/2 Financial Results_June 2020.pdf" }],
+            "March-2020": [{ name: "Quarterly Financial Results March-2020", file: "http://www.artefactprojects.com/1 Financial Results_March 2020.pdf" }],
+            "Dec-2019": [{ name: "Quarterly Financial Results Dec-2019", file: "http://www.artefactprojects.com/Results_31.12.2019.pdf" }],
+            "Sep-2019": [{ name: "Quarterly Financial Results Sep-2019", file: "http://www.artefactprojects.com/Results_30.09.2019.pdf" }],
+            "June-2019": [{ name: "Quarterly Financial Results June-2019", file: "http://www.artefactprojects.com/Results_30.06.2019.pdf" }],
+            "Mar-2019": [{ name: "Quarterly Financial Results Mar-2019", file: "http://www.artefactprojects.com/Results_31.03.2019.pdf" }],
+            "Dec-2018": [{ name: "Quarterly Financial Results Dec-2018", file: "http://www.artefactprojects.com/Results_31.12.2018.pdf" }],
+            "Sep-2018": [{ name: "Quarterly Financial Results Sep-2018", file: "http://www.artefactprojects.com/Results_30.09.2018.pdf" }]
+        },
+        "scrutinizerReports": {
+            "2023": [{ name: "Scrutinizer Report 2023", file: "http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf" }],
+            "2022": [{ name: "Scrutinizer Report 2022", file: "http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf" }],
+            "2021": [{ name: "Scrutinizer Report 2021", file: "http://www.artefactprojects.com/Scrutinizer_Report_2021.pdf" }],
+            "2020": [{ name: "Scrutinizer Report 2020", file: "http://www.artefactprojects.com/Scrutinizer_Report_2020.pdf" }],
+            "2019": [{ name: "Scrutinizer Report 2019", file: "http://www.artefactprojects.com/Scrutinizer_Report_2019.pdf" }],
+            "2018": [{ name: "Scrutinizer Report 2018", file: "http://www.artefactprojects.com/Scrutinizer_2018.pdf" }],
+            "2017": [{ name: "Scrutinizer Report 2017", file: "http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf" }]
+
+        },
+        "annualReturns": {
+            "2022-2023": [{ name: "Annual Return 2022 - 2023", file: "http://www.artefactprojects.com/Annual_Return_2022-2023.pdf" }],
+            "2021-2022": [{ name: "Annual Return 2021 - 2022", file: "http://www.artefactprojects.com/Annual_Return_2021-2022.pdf" }],
+            "2020-2021": [{ name: "Annual Return 2020 - 2021", file: "http://www.artefactprojects.com/Annual_Return_2020-2021.pdf" }]
+        }
+    };
+
+    // Helper function to populate report list
+    function populateReportList(selectId, listId, reportType) {
+        const selectElement = document.getElementById(selectId);
+        const listElement = document.getElementById(listId);
+
+        selectElement.addEventListener('change', function () {
+            const selectedValue = selectElement.value;
+            const reportData = reportsData[reportType][selectedValue];
+            listElement.innerHTML = '';
+
+            reportData.forEach(report => {
+                const reportItem = document.createElement('div');
+                reportItem.classList.add('report-item');
+
+                const reportName = document.createElement('span');
+                reportName.textContent = report.name;
+
+                const downloadLink = document.createElement('a');
+                downloadLink.classList.add('download-btn');
+                downloadLink.href = report.file;
+                downloadLink.textContent = 'view';
+
+                reportItem.appendChild(reportName);
+                reportItem.appendChild(downloadLink);
+                listElement.appendChild(reportItem);
+            });
+        });
+    }
+
+    populateReportList('annual-reports-select', 'annual-reports-list', 'annualReports');
+    populateReportList('financial-results-select', 'financial-results-list', 'financialResults');
+    populateReportList('scrutinizer-reports-select', 'scrutinizer-reports-list', 'scrutinizerReports');
+    populateReportList('annual-returns-select', 'annual-returns-list', 'annualReturns');
+</script>
+
+</body>
+</html>
+
 
 

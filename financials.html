@@ -34,71 +34,57 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-        .custom-section * {
-          box-sizing: border-box;
+        * {
+            box-sizing: border-box;
         }
-
-        /* Container for flexboxes */
-        .custom-section .row {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between; /* Ensure equal spacing between columns */
+        .report_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
         }
-
-        /* Create four equal columns */
-        .custom-section .column {
-          flex: 1 1 22%; /* Flex-grow: 1; Flex-shrink: 1; Flex-basis: 22% to ensure 4 equal columns */
-          padding: 20px;
-          border: 2px solid #003978;
-          border-radius: 8px;
-          background-color: #f5f5f5;
-          margin: 10px;
-          min-width: 250px; /* Minimum width to avoid too small columns */
-        }
-
-        .custom-section ul {
-            list-style: none; /* Remove default bullets */
-            padding: 0;
+        .report-column {
+            background-color: #fff;
+            border: 1px solid #003978;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 0;
-            font-family: 'Arial', sans-serif; /* Use a clean, professional font */
         }
-
-        .custom-section ul li {
-            margin-bottom: 10px; /* Add space between list items */
-            font-size: 16px; /* Adjust font size */
+        .dropdown {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-
-        .custom-section ul li a {
-            text-decoration: none; /* Remove underline */
-            color: #333; /* Set a professional text color */
-            background-color: #f9f9f9; /* Light background for the link */
-            padding: 8px 12px; /* Add padding to the links */
-            border: 1px solid #ddd; /* Light border for links */
-            border-radius: 5px; /* Rounded corners for a smooth look */
-            display: inline-block; /* Keep the link inline but allow padding */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+        .report-list {
+            margin-top: 20px;
         }
-
-        .custom-section ul li a:hover {
-            background-color: #007BFF; /* Change background color on hover */
-            color: #fff; /* Change text color on hover */
-            border-color: #007BFF; /* Match border with the hover background */
+        .report-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
-
-        /* On screens that are 992px wide or less, go from four columns to two columns */
-        @media screen and (max-width: 992px) {
-          .custom-section .column {
-            flex: 1 1 45%; /* Adjust flex-basis to allow two columns on medium screens */
-          }
+        .download-btn {
+            padding: 5px 10px;
+            background-color: #003978;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
         }
-
-        /* On screens that are 600px wide or less, make the columns stack on top of each other */
-        @media screen and (max-width: 600px) {
-          .custom-section .column {
-            flex: 1 1 100%; /* Stack columns vertically */
-            margin: 10px 0; /* Adjust margin for vertical stacking */
-          }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .report-column {
+                max-width: 100%;
+            }
         }
     </style>
 
@@ -251,243 +237,189 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-12" style="position: relative;">
-                    <input id="searchInput" onkeyup="searchReports()"
-                           placeholder="&#x1F50D; Search for year..."
-                           style="width: 100%;
-                        padding: 12px 20px 12px 40px;
-                        margin: 8px 0;
-                        box-sizing: border-box;
-                        border: 2px solid #ccc;
-                        border-radius: 4px;
-                        font-size: 16px;
-                        background-color: #f8f8f8;
-                        color: #333;" type="text">
-                </div>
+                <p></p>
             </div>
         </div>
         <br>
 
-        <div class="custom-section">
-            <div class="row">
-                <!-- Annual Reports -->
-                <div class="column">
-                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                        <b>ANNUAL REPORTS</b>
-                    </h3><br>
-                    <ul class="report-list">
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual Report 2022-2023 .pdf"
-                            >2022 - 2023</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual Report 2021-2022 .pdf"
-                            >2021 - 2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                            >2020&nbsp;- 2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                            >2018&nbsp;- 2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf"
-                            >2019&nbsp;- 2020</a>
-                        </li>
-                        <li><a href="http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf"
-                        >2020&nbsp;- 2021</a></li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf">2019&nbsp;- 2020</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual_Report_2018-19.pdf"
-                            >2018&nbsp;- 2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual_Report _2017-18.pdf"
-                            >2017 - 2018</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual Report 2016-17.pdf"
-                            >2016&nbsp;- 2017</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual Report-2015-16.pdf"
-                            >2015-2016</a>
-                        </li>
+        <div class="report_container">
+            <!-- Annual Reports -->
+            <div class="report-column">
+                <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; position: relative;">
+                    ANNUAL <br>REPORTS</h3>
+                <select  class="dropdown" id="annual-reports-select">
+                    <option disabled selected value="" style="background:#D3D3D3; color:#003978;">Select Financial Year</option>
+                    <option value="2022-2023">FY 2022 - 2023</option>
+                    <option value="2021-2022">FY 2021 - 2022</option>
+                    <option value="2020-2021">FY 2020 - 2021</option>
+                    <option value="2019-2020">FY 2019 - 2020</option>
+                    <option value="2018-2019">FY 2018 - 2019</option>
+                    <option value="2017-2018">FY 2017 - 2018</option>
+                    <option value="2016-2017">FY 2016 - 2017</option>
+                    <option value="2015-2016">FY 2015 - 2016</option>
+                </select>
+                <div class="report-list" id="annual-reports-list"></div>
+            </div>
 
-                        <!-- More Annual Reports -->
-                    </ul>
-                </div>
+            <!-- Financial Results Quarterly -->
+            <div class="report-column">
+                <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; position: relative;">
+                    FINANCIAL RESULT QUARTERLY</h3>
+                <select class="dropdown" id="financial-results-select">
+                    <option disabled selected value="" style="background:#D3D3D3; color:#003978;">Select Quarter Year</option>
+                    <option value="Sep-2023">Sep 2023</option>
+                    <option value="June-2023">June&nbsp;2023</option>
+                    <option value="Mar-2023">Mar 2023</option>
+                    <option value="Dec-2022">Dec&nbsp;2022</option>
+                    <option value="Sep-2022">Sep&nbsp;2022</option>
+                    <option value="June-2022">June&nbsp;2022</option>
+                    <option value="Mar-2022">Mar 2022</option>
+                    <option value="Dec-2021">Dec 2021</option>
+                    <option value="Sep-2021">Sep 2021</option>
+                    <option value="June-2021">June 2021</option>
+                    <option value="March-2021">March 2021</option>
+                    <option value="Dec-2020">Dec 2020</option>
+                    <option value="Sep-2020">Sep 2020</option>
+                    <option value="June-2020">June 2020</option>
+                    <option value="March-2020">March 2020</option>
+                    <option value="Dec-2019">Dec 2019</option>
+                    <option value="Sep-2019">Sep 2019</option>
+                    <option value="June-2019">June 2019</option>
+                    <option value="Mar-2019">Mar 2019</option>
+                    <option value="Dec-2018">Dec 2018</option>
+                    <option value="Sep-2018">Sep 2018</option>
+                </select>
+                <div class="report-list" id="financial-results-list"></div>
+            </div>
 
-                <!-- Financial Results -->
-                <div class="column">
-                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                        <b>FINANCIAL RESULT QUARTERLY</b>
-                    </h3><br>
-                    <ul class="report-list">
-                        <li>
-                            <a href="http://www.artefactprojects.com/Financial Results_30.09.2023.pdf">Sep&nbsp;2023</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Financial Results_30.06.2023.pdf"
-                            >June&nbsp;2023</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Financial Results_31.03.2023.pdf"
-                            >Mar 2023</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Financial Results_31.12.2022.pdf"
-                            >Dec&nbsp;2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Financial results_30.09.2022.pdf"
-                            >Sep&nbsp;2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Financial Results_30.06.2022.pdf"
-                            >June&nbsp;2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf"
-                            >Mar 2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf"
-                            >Dec 2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf"
-                            >Sep 2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf"
-                            >Sep 2020</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/5 Financial results_June 2021.pdf"
-                            >June 2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/4 Financial Results_March 2021.pdf"
-                            >March 2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/3 Financial results_December 2020.pdf"
-                            >Dec 2020</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/2 Financial Results_June 2020.pdf"
-                            >June 2020</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/1 Financial Results_March 2020.pdf"
-                            >March 2020</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Results_31.12.2019.pdf"
-                            >Dec 2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Results_30.09.2019.pdf"
-                            >Sep 2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Results_30.06.2019.pdf"
-                            >June 2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Results_31.03.2019.pdf"
-                            >Mar 2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Results_31.12.2018.pdf"
-                            >Dec 2018</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Results_30.09.2018.pdf"
-                            >Sep 2018</a>
-                        </li>
-                        <!-- More Financial Results -->
-                    </ul>
-                </div>
 
-                <!-- Scrutinizer Reports -->
-                <div class="column">
-                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                        <b>SCRUTINIZER REPORTS</b>
-                    </h3><br>
-                    <ul class="report-list">
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf"
-                            >2023</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf"
-                            >2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer Report_2021.pdf"
-                            >2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer Report_2020.pdf"
-                            >2020</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer_2019.pdf"
-                            >2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer_2018.pdf"
-                            >2018</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf"
-                            >2019</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/SCRUTINIZER.pdf.pdf"
-                            >2017</a>
-                        </li>
+            <!-- Scrutinizer Reports -->
+            <div class="report-column">
+                <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; position: relative;">
+                    SCRUTINIZER <br>REPORTS</h3>
+                <select class="dropdown" id="scrutinizer-reports-select">
+                    <option disabled selected value="" style="background:#D3D3D3; color:#003978;">Select Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                </select>
+                <div class="report-list" id="scrutinizer-reports-list"></div>
+            </div>
 
-                    </ul>
-                </div>
-
-                <!-- Annual Return -->
-                <div class="column">
-                    <h3 align="center" style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0;">
-                        <b>ANNUAL RETURN</b>
-                    </h3><br>
-                    <ul class="report-list">
-                        <li>
-                            <a href="http://www.artefactprojects.com/MGT_7_2022-23.pdf"
-                            >2022-2023</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/MGT_7_2021-22.pdf"
-                            >2021-2022</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual Return_2020-21.pdf"
-                            >2020-2021</a>
-                        </li>
-                        <li>
-                            <a href="http://www.artefactprojects.com/Annual Return_2019-20.pdf"
-                            >2019-2020</a>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Annual Returns -->
+            <div class="report-column">
+                <h3 style="background:#D3D3D3; font-size:22px; color:#003978; padding: 10px 0; cursor: pointer; position: relative;">
+                    ANNUAL<br> RETURN</h3>
+                <select class="dropdown" id="annual-returns-select">
+                    <option disabled selected value="" style="background:#D3D3D3; color:#003978;">Select Year</option>
+                    <option value="2022-2023">2022 - 2023</option>
+                    <option value="2021-2022">2021 - 2022</option>
+                    <option value="2020-2021">2020 - 2021</option>
+                    <option value="2019-2020">2019 - 2020</option>
+                </select>
+                <div class="report-list" id="annual-returns-list"></div>
             </div>
         </div>
-        
+
+        <script>
+            const reportsData = {
+                "annualReports": {
+                    "2022-2023": [{ name: "Annual Report 2022 - 2023", file: "http://www.artefactprojects.com/Annual_Report_2022-2023.pdf" }],
+                    "2021-2022": [{ name: "Annual Report 2021 - 2022", file: "http://www.artefactprojects.com/Annual_Report_2021-2022.pdf" }],
+                    "2020-2021": [{ name: "Annual Report 2020 - 2021", file: "http://www.artefactprojects.com/ANNUAL_REPORT_2021.pdf" }],
+                    "2019-2020": [{ name: "Annual Report 2019 - 2020", file: "http://www.artefactprojects.com/ANNUAL_REPORT_2020.pdf" }],
+                    "2018-2019": [{ name: "Annual Report 2018 - 2019", file: "http://www.artefactprojects.com/Annual_Report_2018-19.pdf" }],
+                    "2017-2018": [{ name: "Annual Report 2017 - 2018", file: "http://www.artefactprojects.com/Annual_Report_2017-18.pdf" }],
+                    "2016-2017": [{ name: "Annual Report 2016 - 2017", file: "http://www.artefactprojects.com/Annual_Report_2016-17.pdf" }],
+                    "2015-2016": [{ name: "Annual Report 2015 - 2016", file: "http://www.artefactprojects.com/Annual_Report_2015-16.pdf" }]
+                },
+                "financialResults": {
+                    "Sep-2023": [{ name: "Quarterly Financial Results Sep-2023", file: "http://www.artefactprojects.com/Financial Results_30.09.2023.pdf" }],
+                    "June-2023": [{ name: "Quarterly Financial Results June-2023", file: "http://www.artefactprojects.com/Financial Results_30.06.2023.pdf" }],
+                    "Mar-2023": [{ name: "Quarterly Financial Results Mar-2023", file: "http://www.artefactprojects.com/Financial Results_31.03.2023.pdf" }],
+                    "Dec-2022": [{ name: "Quarterly Financial Results Dec-2022", file: "http://www.artefactprojects.com/Financial Results_31.12.2022.pdf" }],
+                    "Sep-2022": [{ name: "Quarterly Financial Results Sep-2022", file: "http://www.artefactprojects.com/Financial results_30.09.2022.pdf" }],
+                    "June-2022": [{ name: "Quarterly Financial Results June-2022", file: "http://www.artefactprojects.com/Financial Results_30.06.2022.pdf" }],
+                    "Mar-2022": [{ name: "Quarterly Financial Results Mar-2022", file: "http://www.artefactprojects.com/3 Financial Results_31.03.2022.pdf" }],
+                    "Dec-2021": [{ name: "Quarterly Financial Results Dec-2021", file: "http://www.artefactprojects.com/2 Financial Results_31.12.2021.pdf" }],
+                    "Sep-2021": [{ name: "Quarterly Financial Results Sep-2021", file: "http://www.artefactprojects.com/1 Financial_Results 30.09.2021.pdf" }],
+                    "June-2021": [{ name: "Quarterly Financial Results June-2021", file: "http://www.artefactprojects.com/5 Financial results_June 2021.pdf" }],
+                    "March-2021": [{ name: "Quarterly Financial Results March-2021", file: "http://www.artefactprojects.com/4 Financial Results_March 2021.pdf" }],
+                    "Dec-2020": [{ name: "Quarterly Financial Results Dec-2020", file: "http://www.artefactprojects.com/3 Financial results_December 2020.pdf" }],
+                    "Sep-2020": [{ name: "Quarterly Financial Results Sep-2020", file: "http://www.artefactprojects.com/6 Financial results_Sept. 2020.pdf" }],
+                    "June-2020": [{ name: "Quarterly Financial Results June-2020", file: "http://www.artefactprojects.com/2 Financial Results_June 2020.pdf" }],
+                    "March-2020": [{ name: "Quarterly Financial Results March-2020", file: "http://www.artefactprojects.com/1 Financial Results_March 2020.pdf" }],
+                    "Dec-2019": [{ name: "Quarterly Financial Results Dec-2019", file: "http://www.artefactprojects.com/Results_31.12.2019.pdf" }],
+                    "Sep-2019": [{ name: "Quarterly Financial Results Sep-2019", file: "http://www.artefactprojects.com/Results_30.09.2019.pdf" }],
+                    "June-2019": [{ name: "Quarterly Financial Results June-2019", file: "http://www.artefactprojects.com/Results_30.06.2019.pdf" }],
+                    "Mar-2019": [{ name: "Quarterly Financial Results Mar-2019", file: "http://www.artefactprojects.com/Results_31.03.2019.pdf" }],
+                    "Dec-2018": [{ name: "Quarterly Financial Results Dec-2018", file: "http://www.artefactprojects.com/Results_31.12.2018.pdf" }],
+                    "Sep-2018": [{ name: "Quarterly Financial Results Sep-2018", file: "http://www.artefactprojects.com/Results_30.09.2018.pdf" }]
+                },
+                "scrutinizerReports": {
+                    "2023": [{ name: "Scrutinizer Report 2023", file: "http://www.artefactprojects.com/Scrutinizer_Report_2023.pdf" }],
+                    "2022": [{ name: "Scrutinizer Report 2022", file: "http://www.artefactprojects.com/Scrutinizer_Report_2022.pdf" }],
+                    "2021": [{ name: "Scrutinizer Report 2021", file: "http://www.artefactprojects.com/Scrutinizer_Report_2021.pdf" }],
+                    "2020": [{ name: "Scrutinizer Report 2020", file: "http://www.artefactprojects.com/Scrutinizer_Report_2020.pdf" }],
+                    "2019": [{ name: "Scrutinizer Report 2019", file: "http://www.artefactprojects.com/Scrutinizer_Report_2019.pdf" }],
+                    "2018": [{ name: "Scrutinizer Report 2018", file: "http://www.artefactprojects.com/Scrutinizer_2018.pdf" }],
+                    "2017": [{ name: "Scrutinizer Report 2017", file: "http://www.artefactprojects.com/Scrutinizer_EGM_2019.pdf" }]
+
+                },
+                "annualReturns": {
+                    "2022-2023": [{ name: "Annual Return 2022 - 2023", file: "http://www.artefactprojects.com/Annual_Return_2022-2023.pdf" }],
+                    "2021-2022": [{ name: "Annual Return 2021 - 2022", file: "http://www.artefactprojects.com/Annual_Return_2021-2022.pdf" }],
+                    "2020-2021": [{ name: "Annual Return 2020 - 2021", file: "http://www.artefactprojects.com/Annual_Return_2020-2021.pdf" }]
+                }
+            };
+
+            // Helper function to populate report list
+            function populateReportList(selectId, listId, reportType) {
+                const selectElement = document.getElementById(selectId);
+                const listElement = document.getElementById(listId);
+
+                selectElement.addEventListener('change', function () {
+                    const selectedValue = selectElement.value;
+                    const reportData = reportsData[reportType][selectedValue];
+                    listElement.innerHTML = '';
+
+                    reportData.forEach(report => {
+                        const reportItem = document.createElement('div');
+                        reportItem.classList.add('report-item');
+
+                        const reportName = document.createElement('span');
+                        reportName.textContent = report.name;
+
+                        const downloadLink = document.createElement('a');
+                        downloadLink.classList.add('download-btn');
+                        downloadLink.href = report.file;
+                        downloadLink.textContent = 'view';
+
+                        reportItem.appendChild(reportName);
+                        reportItem.appendChild(downloadLink);
+                        listElement.appendChild(reportItem);
+                    });
+                });
+            }
+
+            populateReportList('annual-reports-select', 'annual-reports-list', 'annualReports');
+            populateReportList('financial-results-select', 'financial-results-list', 'financialResults');
+            populateReportList('scrutinizer-reports-select', 'scrutinizer-reports-list', 'scrutinizerReports');
+            populateReportList('annual-returns-select', 'annual-returns-list', 'annualReturns');
+        </script>
+
     </div>
 
 
 </div>
+<br>
+<br>
+<br>
+<br>
 
 <!--    Add sections here-->
 
