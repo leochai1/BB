@@ -450,20 +450,20 @@
 
             <div class="row about-content" style="display:flex; justify-content:center; ;flex-direction:row;">
                 <!-- second-->
-                <div STYLE="width:360px;" class="col-12 col-sm-6 col-xl-3">
+                <div STYLE="width:560px;" class="col-12 col-sm-6 col-xl-3">
                     <div class="card border border-primary shadow-lg"
                          style="transform: translateY(-10px); transition: all 0.3s ease;">
                         <div class="card-body text-center p-4 p-xxl-5">
                             <h2><a href="aboutus.html"><b>OUR STORY</b></a></h2><br>
                             <p align="left">Artefact Projects was founded in 1987 with a focus on
                                 delivering quality infrastructure services, including engineering and project
-                                management. The company has evolved into a leading consultancy firm, managing
+                                management. The company evolved into a leading consultancy firm, managing
                                 large-scale projects in transportation, airports, and urban development.
                         </div>
                     </div>
                 </div>
 
-                <div STYLE="width:360px;" class="col-12 col-sm-6 col-xl-3">
+                <div STYLE="width:560px;" class="col-12 col-sm-6 col-xl-3">
                     <div class="card border border-primary shadow-lg"
                          style="transform: translateY(-10px); transition: all 0.3s ease;">
                         <div class="card-body text-center p-4 p-xxl-5">
@@ -471,7 +471,7 @@
                             <p align="left">Artefact Projects is an infrastructure consultancy company
                                 specializing in engineering, project management, and construction services. Established
                                 in 1987, it focuses on surface transportation, airport terminals, highways, and railway
-                                sectors.
+                                sectors.&nbsp;&nbsp;&nbsp;&nbsp;
                             </p>
                         </div>
                     </div>

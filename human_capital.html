@@ -204,54 +204,146 @@
     <!--    Add sections here-->
     <div class="midpage">
         <h2 align="left" class="sm-xs-center"
-            style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;"></h2><br><br>
+            style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;"></h2><br>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 col2bg">
                     <div class="smallpage">
-                        <div style="display:flex; justify-content:center; ;flex-direction:row;">
-                            <div align="center" style="margin:auto; padding:20px;">
-                                <div class="botbtm activebutt">
-                                    <a class="hover-effect" href="company_profile.html">
-                                        <img alt="" height="60" src="images/icons/corporate.png"
-                                             width="60"/><br/>
-                                        <strong style="color:blue;">COMPANY PROFILE</strong>
-                                    </a>
+                        <section id="content">
+                            <div class="container">
+                                <div class="row features-row">
+                                    <div class="feature-box">
+                                        <div class="icon">
+                                            <img alt="" src="images/icons/corporate.png"
+                                                 width="60"/>
+                                        </div>
+                                        <div class="text">
+                                            <a href="company_profile.html"><h6><b>COMPANY PROFILE</b></h6></a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box">
+                                        <div class="icon">
+                                            <img alt="" height="60" src="images/icons/human-capital.png"
+                                                 width="60"/>
+                                        </div>
+                                        <div class="text">
+                                            <a href="human_capital.html"><h6><b>HUMAN CAPITAL</b></h6></a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box">
+                                        <div class="icon">
+                                            <img alt="" height="60" src="images/icons/building.png"
+                                                 width="60"/>
+                                        </div>
+                                        <div class="text">
+                                            <a href="infrastructure.html"><h6><b>INFRASTRUCTURE</b></h6></a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box">
+                                        <div class="icon">
+                                            <img alt="" height="60" src="images/icons/customer.png" width="60"/>
+                                        </div>
+                                        <div class="text">
+                                            <a href="clients.html"><h6><b>CLIENTS</b></h6></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </section>
+                        <style>
+                            /* Container and layout styling */
+                            .features-row {
+                                display: flex;
+                                flex-wrap: wrap; /* Allow wrapping if necessary */
+                                justify-content: space-between; /* Space between items */
+                                gap: 10px; /* Space between items */
+                            }
 
-                            <div align="center" style="margin:auto; padding:10px;">
-                                <div class="botbtm">
-                                    <a class="hover-effect" href="human_capital.html">
-                                        <img alt="" height="60" src="images/icons/human-capital.png"
-                                             width="60"/><br/>
-                                        <strong style="color:blue;">HUMAN CAPITAL</strong>
-                                    </a>
-                                </div>
-                            </div>
+                            /* Feature box styling */
+                            .feature-box {
+                                padding: 10px; /* Reduce padding for smaller screens */
+                                text-align: center;
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                flex: 1 1 calc(25% - 20px); /* Make the boxes flexible and fit 4 per row */
+                                max-width: calc(25% - 20px); /* Ensure the boxes stay within 25% of the row width */
+                            }
+                            /* Hover effect */
+                            .feature-box:hover {
+                                transform: translateY(-10px);
+                            }
 
-                            <div align="center" style="margin:auto; padding:10px;">
-                                <div class="botbtm">
-                                    <a class="hover-effect" href="infrastructure.html">
-                                        <img alt="" height="60" src="images/icons/building.png"
-                                             width="60"/><br/>
-                                        <strong style="color:blue;">INFRASTRUCTURE</strong>
-                                    </a>
-                                </div>
-                            </div>
+                            /* Icon styling with round background */
+                            .feature-box .icon {
+                                margin-bottom: 10px; /* Adjust the gap between icon and text */
+                                display: inline-block;
+                                background-color: #f0f0f0;
+                                border-radius: 50%;
+                                padding: 15px; /* Reduce padding to shrink icon circle */
+                            }
 
-                            <div align="center" style="margin:auto; padding:10px;">
-                                <div class="botbtm">
-                                    <a class="hover-effect" href="clients.html">
-                                        <img alt="" height="60" src="images/icons/customer.png" width="60"/><br/>
-                                        <strong style="color:blue;">CLIENTS</strong>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                            /* Icon image hover effect */
+                            .feature-box:hover .icon img {
+                                transform: scale(1.2); /* Slightly increase the size of the icon image */
+                            }
+
+                            .feature-box .icon img {
+                                display: block;
+                                margin: auto;
+                                width: 50px; /* Adjust the icon size */
+                                height: 50px;
+                            }
+
+                            /* Text styling */
+                            .feature-box h6 {
+                                font-size: 16px; /* Adjust font size */
+                                margin-bottom: 5px;
+                                margin-top: 0px;
+                            }
+
+                            .feature-box a {
+                                color: #003978;
+                                text-decoration: none;
+                                font-weight: bold;
+                            }
+
+                            .feature-box a:hover {
+                                color: #003978;
+                                text-decoration: underline;
+                            }
+
+                            /* Blinking text effect on hover */
+                            @keyframes blink {
+                                0% { opacity: 1; }
+                                50% { opacity: 0; }
+                                100% { opacity: 1; }
+                            }
+
+                            .feature-box:hover h6,
+                            .feature-box:hover p {
+                                animation: blink 1s infinite;
+                            }
+
+                            /* Responsive design */
+                            @media (max-width: 768px) {
+                                .feature-box {
+                                    flex: 1 1 calc(50% - 20px); /* Fit two icons per row on smaller screens */
+                                    max-width: calc(50% - 20px);
+                                }
+                            }
+
+                            @media (max-width: 480px) {
+                                .feature-box {
+                                    flex: 1 1 calc(50% - 10px); /* Keep two icons per row for very small screens */
+                                    max-width: calc(50% - 10px);
+                                }
+                            }
+
+                        </style>
+
                     </div>
                     <div class="col-md-12">
-                        <div class="col-md-12"><br>
+                        <div class="fa-border"
+                             style="padding: 0 10px; margin-bottom: 20px"><br>
 
                             <p style="color:black;"><strong>THE PROPELLING POWERHOUSE </strong><br>
                             </p><br>
@@ -260,13 +352,9 @@
                                 Asset. The strength of Technical, Contract, Legal and Project Management Professionals,
                                 exceeding 300 with National and International experience and a proven track-record,
                                 forms the Company’s Backbone.
-                                <br>The broad break-up of manpower strength is as below: </p><br>
-                        </div>
-<!--                        <div class="col-md-6"><img alt="" class="img-responsive" height="284"-->
-<!--                                                   src="images/old/professional.png" width="618"/></div>-->
-<!--                        <div class="col-md-6"><img alt="" class="img-responsive" height="284"-->
-<!--                                                   src="images/old/backup.png" width="618"/></div>-->
-                        <div class="col-md-12">
+                                <br>The broad break-up of manpower strength is as below:
+                            </p><br>
+
                             <p>Promoters are Engineers &amp; Finance Professionals being First Generation
                                 Entrepreneurs. </p><br>
                             <p>Technical Professionals include Civil Engineers, Structural Engineers, Environmental
@@ -290,8 +378,10 @@
                             <!--                                    <li>Committed to “Customer Centricity”</li>-->
                             <!--                                </ul>-->
                             <!--                            </div>-->
+                        </div>
                             <br>
-                            <h3 style="color:blue; font-size:18px;"><b>The Key Management Team Comprises of :-</b></h3>
+                            <h3 style="color:#003978; font-size:18px;"><b>The Key Management Team Comprises of :-</b>
+                            </h3>
                             <br>
 
                             <div class="col-md-12" style="margin-top: 20px">
@@ -326,12 +416,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 text-center"><img alt="" height="154"
-                                                                                           src="images/old/SMB.jpg"
+                                                                                           src="images/old/pritti_agrawal.jpg"
                                                                                            width="125"/><br>
 
-                                                        <b>Mr. Sandeep Batta</b><br>
+                                                        <b>Mrs. Pritti Agrawal</b><br>
                                                         (F.C.A)<br>
-                                                        Director
+                                                        Independent Director
                                                     </div>
                                                     <div class="col-md-3 text-center">
                                                         <div class="personheight"><img alt=""
@@ -442,29 +532,10 @@
                             </div>
                         </div>
                         <br>
-                        <!--                        <h3 style="color:blue; font-size:14px;"><b>Artefact believes in attracting and retention-->
-                        <!--                            of talent. The management style-->
-                        <!--                            therefore is,</b></h3><br>-->
-                        <!--                        <div class="col-md-4">-->
-                        <!--                            <div class="fa-border"-->
-                        <!--                                 style="padding: 10px 40px; margin-bottom: 30px">-->
-                        <!--                                <h3 style="color:blue; font-size:14px;"><b>At a Glance: </b></h3><br>-->
-                        <!--                                <ul class="bulls">-->
-                        <!--                                    <li> Participative, flexible with an eye for detail</li>-->
-                        <!--                                    <li> Ability to nurture ,develop and retain right talent</li>-->
-                        <!--                                    <li> Strives for excellence through improvisation</li>-->
-                        <!--                                    <li> Focused on “Enterprise Governance”</li>-->
-                        <!--                                    <li> Committed to “ Customer Centricity”</li>-->
-                        <!--                                    <li> Has Result orientation</li>-->
-                        <!--                                </ul>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
-                        <div class="col-md-8">
-                            <div class="imagewrapleft"><img src="images/old/graph.jpg"></div>
-                        </div>
+
                         <div class="clearfix"></div>
                         <div class="col-md-12 space"><br>
-                            <h3 style="color:blue; font-size:18px;"><b>COLLABORATORS AND ASSOCIATES</b></h3><br>
+                            <h3 style="color:#003978; font-size:18px;"><b>COLLABORATORS AND ASSOCIATES</b></h3><br>
                             <p>Artefact Projects has collaborated and formed long term joint ventures with
                                 globally renowned Consulting Engineers, Architects and Planners.</p><br>
                             <p>Artefact serves its clients for all special expertise with international experience.</p>
@@ -472,7 +543,7 @@
                             <p> Artefact delivers quality has availability of global specialists and absorbs latest
                                 technology.</p><br>
                             <p>
-                            <h3 style="color:blue; font-size:18px;"><strong>SOME NOTABLE COLLABORATORS
+                            <h3 style="color:#003978; font-size:18px;"><strong>SOME NOTABLE COLLABORATORS
                                 INCLUDES:-</strong></h3><br>
                         </div>
                         <div class="col-md-6 space">

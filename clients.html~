@@ -338,7 +338,22 @@
                         }
 
                     </style>
-
+                    <div class="row">
+                        <div class="span12">
+                            <div class="solidline">
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .solidline {
+                            height: 2px; /* Thickness of the line */
+                            background-color: #003978; /* Solid color for the line */
+                            margin: 20px 0; /* Space around the line */
+                            border-radius: 2px; /* Rounded corners for a smoother look */
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+                            width: 100%; /* Full-width line */
+                        }
+                    </style>
 
                     <div class="smallpage">
                         <div class="row">
