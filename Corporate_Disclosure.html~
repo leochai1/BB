@@ -220,7 +220,7 @@
 
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area" data--black__overlay="6"
-         style="background-color:#003978">
+         style="background: rgba(0, 0, 0, 1)">
         <div class="ht__bradcaump__wrap">
             <div class="container">
                 <div class="row">

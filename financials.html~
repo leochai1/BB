@@ -202,7 +202,7 @@
 
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area" data--black__overlay="6"
-         style="background-color:#003978">
+         style="background: rgba(0, 0, 0, 1)">
         <div class="ht__bradcaump__wrap">
             <div class="container">
                 <div class="row">
@@ -224,7 +224,9 @@
 
     <!--    Add sections here-->
     <div class="midpage">
-        <br>
+        <h2 align="left" class="sm-xs-center"
+            style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;">
+        </h2><br>
 
         <div class="col-md-12">
             &nbsp;

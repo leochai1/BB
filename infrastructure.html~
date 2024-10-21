@@ -310,9 +310,9 @@
                     </style>
 
 
-                    <div class="smallpage">
-                        <div class="fa-border"
-                             style="padding: 0 10px; margin-bottom: 20px">
+                    <div class="fa-border"
+                         style="padding: 0 10px; margin-bottom: 20px">
+                        <div class="col-md-12">
                             &nbsp;
                             <p>
                                 <strong style="color:black;">Artefact</strong> has Corporate Office at Nagpur, more
@@ -322,9 +322,7 @@
                                 equipment’s, communication systems, IT Hardwares, ERP &amp; Design software’s,
                                 laboratory,
                                 Testing Equipment’s and Library.
-                            </p>
-                            <br>
-                            <br>
+                            </p><br>
 
                             <div class="col-md-6">
                                 <div class="col-md-6">

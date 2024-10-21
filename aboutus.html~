@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <title>Airports || Artefacts Projects</title>
+    <title>About Us || Artefacts Projects</title>
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
@@ -34,6 +34,77 @@
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="css/history.css" rel="stylesheet">
+
+    <style>
+        .txtquotes {
+            background-color: #e8e8e8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #7f8c8d;
+            position: relative;
+            opacity: 0;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 36px;
+            animation: moveToCenter 6.5s ease-in-out forwards, typing 5s steps(35, end) forwards;
+            width: fit-content;
+            margin: 0 auto;
+            white-space: normal; /* Prevents text overflow on smaller screens */
+            word-wrap: break-word; /* Makes sure long words wrap properly */
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes moveToCenter {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* For larger devices */
+        @media (min-width: 1200px) {
+            .txtquotes {
+                font-size: 36px;
+                padding: 15px 25px;
+            }
+        }
+
+        /* For medium devices */
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .txtquotes {
+                font-size: 28px;
+                padding: 12px 20px;
+            }
+        }
+
+        /* For small devices */
+        @media (max-width: 767px) {
+            .txtquotes {
+                font-size: 22px;
+                padding: 10px 15px;
+            }
+        }
+
+        /* For extra small devices */
+        @media (max-width: 480px) {
+            .txtquotes {
+                font-size: 18px;
+                padding: 8px 10px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -146,17 +217,18 @@
 
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area" data--black__overlay="6"
-         style="background-color:#003978">
+         style="background: linear-gradient(to left, black 20%, #003978 ) ">
         <div class="ht__bradcaump__wrap">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">Airports</h2>
+                            <h2 class="bradcaump-title">History</h2>
                             <nav class="bradcaump-inner">
-                                <a class="breadcrumb-item" href="index.html">Home</a>
+                                <a class="breadcrumb-item" href="index.html"
+                                   style="color:#fff; cursor:pointer;">Home</a>
                                 <span class="brd-separetor">-</span>
-                                <span class="breadcrumb-item active">Project</span>
+                                <span class="breadcrumb-item active">ABOUT US</span>
                             </nav>
                         </div>
                     </div>
@@ -167,71 +239,117 @@
     <!-- End Bradcaump area -->
 
     <!--    Add sections here-->
-
     <div class="midpage">
-
-        <div class="container-fluid">
+        <div class="container-fluid" id="chairman-message">
             <div class="row">
-                <div class="col-md-12 col2bg"><br>
+                <p align="left" style="background-color: #003978; color: white; font-size:23px; padding: 10px 0;">
+                    &nbsp;&nbsp;Chairman's Message</p>
+                <div class="col-md-12 col2bg">
                     <div class="smallpage">
                         <div class="col-md-12">
                             <br>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p style="color:black;"><strong><b>Artefact Projects with its enviable foreign
-                                        collaboration has provided
-                                        services for Airport development.</b></strong></p><br>
-                                    <p>Artefact with its collaborators successfully provided Concept, Design,
-                                        Engineering, Project
-                                        Management Consultancy Services, up to commissioning for Trivandrum
-                                        International
-                                        Greenfield Project. The services included concept designs, architectural
-                                        planning, interior
-                                        design, structural designs, MEP facilities, security systems, communications,
-                                        STP, ETP,
-                                        electric sub-station, approach bridge and roadways, landscaping, environment
-                                        management,
-                                        cost and quality control and project supervision and management.
-                                    </p>
-                                </div>
-                                <div class="col-md-12">
-                                    <div><br>
-                                        <p style="color:black;"><b><strong>Complementing the Terminal Honb’le Prime
-                                            Minister remarked:</strong>
-                                        </b></p><br>
-                                        <p><em>“I compliment the Airports Authority of India for the commitment with
-                                            which they have been building such impressive infrastructure in our
-                                            airports.”</em></p><br>
+                            <br>
 
-                                        <p>The Airport was built with most modern global standards &amp; design. It’s a
-                                            tubular three-storied
-                                            building with a floor area of 20,000 sq. meters, 30 check-in counters, 18
-                                            immigration
-                                            counters, 18 Customs counters, 3 security checking units and 4 conveyor
-                                            belts. The terminal
-                                            can handle, 1600 passengers.
-                                        </p>
+                            <div class="row chairmen">
+
+                                <div class="col-md-12">
+                                    <p><strong style="color:#0066CC; font-size: 17px">ARTEFACT PROJECTS
+                                        LTD.</strong>., proud to be contributors to Nation Building by providing
+                                        critical project services for Highways, Urban Infrastructure, Airports, Mining
+                                        &amp; Railways.<br><br>
+
+                                    <p> We combine technical and Project Management skills to develop projects from
+                                        concepts and
+                                        designs stage to their successful completion and operations.</p><br>
+                                    <p>Our long track record of more than 27 successful years in the niche area of
+                                        expertise reflects
+                                        our commitment, dedication and sense of purpose, apparent in all our ventures
+                                        that result in
+                                        client satisfaction.</p><br>
+
+
+                                    <div class="clear">&nbsp;</div>
+                                    <div class="bigtxt text-center heading">
+                                        <div class="txtquotes">
+                                            “Every Achievement is a milestone, not a destination. With every success,
+                                            goals keep getting bigger”
+                                        </div>
                                     </div>
+
+                                    <div class="clear">&nbsp;</div>
                                 </div>
-                                <br>
-
-
-
-                                <div class="bannerbg"><img alt="" class="img-responsive" src="images/old/airport.jpg"
-                                                           style="border-radius:5px 5px 5px 5px;"/>
-                                </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br><br>
+
+        <div class="container-fluid">
+            <div class="row">
+                <h2 align="left" class="sm-xs-center" id="history"
+                    style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;">&nbsp;&nbsp;History</h2>
+                <div class="col-md-12 col2bg">
+                    <div class="smallpage">
+                        <br>
+                        <div class="col-md-12">
+                            <div class="heading">
+                                <p class="text-center" style="font-size:22px; font-weight:bold;">The Company has built
+                                    its reputation as consultant for National Highways.</p><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <br><br>
 
     <!--    Add sections here-->
+
+    <section class="timeline">
+        <div class="container">
+
+            <!--     ITEM 1  -->
+            <div class="timeline-item">
+                <div class="timeline-img"></div>
+                <div class="timeline-content js--fadeInLeft">
+                    <h2>1987</h2>
+                    <p>Artefact Projects Ltd. was incorporated.</p>
+                </div>
+            </div>
+
+            <!--     ITEM 2  -->
+            <div class="timeline-item">
+                <div class="timeline-img"></div>
+                <div class="timeline-content js--fadeInRight">
+                    <h2>2010</h2>
+                    <p>Completed Successful Private Placement exercise of 9,00,000 Eq Shares and 10,22,400 warrants of
+                        Rs.10/- each at a premium of Rs.91/- each, amounting to Rs.194.2 Mns.</p>
+                </div>
+            </div>
+
+            <!--     ITEM 1  -->
+            <div class="timeline-item">
+                <div class="timeline-img"></div>
+                <div class="timeline-content js--fadeInLeft">
+                    <h2>2024</h2>
+                    <p>Ongoing Highway assignments - ____________ No. of services for projects under
+                        construction with 732.725 Km length &amp; Project Cost of Rs. 7732.85 Cr. Billion for O&amp;M
+                        Projects services of 586.092 Km Length and Project Cost of Rs. ______Cr. and Gross
+                        contracted orders as on sept 2024 at Rs. ________ Cr.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- partial -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
+    <script src="js/history.js"></script>
 
 
     <!-- Start Footer Area -->
@@ -248,20 +366,21 @@
                                     <h2 class="ft__title">ABOUT</h2>
                                 </div>
                                 <div class="ft__details">
-                                    <p>Artefact Projects Ltd. Nagpur has been constituted as a
-                                        civil engineering multi disciplined consultancy organization.
+                                    <p>Artefact Projects Ltd. has been engaged multi-disciplinary consultancy services
+                                        for
+                                        Highways &amp; Infrastructure Projects.
                                     </p>
                                 </div>
                                 <br>
                                 <div class="widget_footer_social">
                                     <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
-                                            class="fa fa-facebook"></i> </a>&nbsp;
+                                            class="fa fa-facebook" style="color:#fff;"></i> </a>&nbsp;
                                     <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
-                                            class="fa fa-twitter"></i> </a>&nbsp;
+                                            class="fa fa-twitter" style="color:#fff;"></i> </a>&nbsp;
                                     <a href="http://www.artefactprojects.com/" target="_blank"> <i
-                                            class="fa fa-google-plus"></i> </a>&nbsp;
+                                            class="fa fa-google-plus" style="color:#fff;"></i> </a>&nbsp;
                                     <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825"
-                                       target="_blank"> <i class="fa fa-linkedin"></i> </a>
+                                       target="_blank"> <i class="fa fa-linkedin" style="color:#fff;"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -294,7 +413,7 @@
                                 <div class="footer__link">
                                     <p style="color:#fff;"><u>Address:</u><br>
                                         “Artefact Towers”<br>
-                                        106, 54/3, Chhatrapati Square,<br>
+                                        Office No.106, Chhatrapati Square,<br>
                                         Wardha Road,<br> Nagpur – 440015<br><br>
                                         <u>Email:</u>&nbsp;&nbsp;
                                         <b>artefactngp@artefactprojects.com</b><br><br>
@@ -308,7 +427,7 @@
                         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 xmt-40">
                             <div class="footer quick__link">
                                 <div class="footer__widget">
-                                    <h2 class="ft__title">CORPORATE OFFICE</h2>
+                                    <h2 class="ft__title">DELHI OFFICE</h2>
                                     <div class="footer__link">
                                         <p style="color:#fff;"><u>Address:</u><br>
                                             First Floor, Yog Divya Mandir,<br>
@@ -355,10 +474,21 @@
 <script src="js/slick.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 
+
 <!-- Waypoints.min.js. -->
 <script src="js/waypoints.min.js"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src="js/main.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){jQuery('#demo').skdslider({'delay':5000, 'fadeSpeed':3000,'showNextPrev':true,'showPlayButton':false,'autoStart':true});});
+</script>
+
+<script>
+    $('#myTab li:nth-child(2) a').tab('show')
+    $('.alltabs').mouseleave(function() {});
+    $('.nav-tabs[data-toggle="tab-hover"] > li > a').click( function(){$(this).tab('show');});
+</script>
 
 </body>
 

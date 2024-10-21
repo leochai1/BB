@@ -178,14 +178,14 @@
 
     <!-- Midpage Area -->
     <div class="midpage">
-
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 col2bg"><br>
                     <div class="smallpage">
                         <div class="col-md-12">
                             <div class="col-md-6">
-                                <div>&nbsp;<h2 style="color:#003978"><b>At a Glance:</b></h2><br>
+                                <div>&nbsp;<h2><b>At a Glance:</b></h2><br>
                                     <ul class="bulls" style="list-style-type: circle;">
                                         <li>Face value of the Company&rsquo;s equity shares is 10/-</li>
                                         <li>The Company&rsquo;s Equity Shares are listed on Bombay Stock
