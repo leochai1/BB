@@ -268,110 +268,20 @@
                         </div>
                     </div>
                     <br>
+                    <br>
+                    <br>
                     <div class="about_area_left single_service_right_content_text">
                         <p>Artefact Infra Projects Ltd., Constituted as a civil engineering
                             multi-disciplined consultancy organization with the aim of participating in the
                             infrastructure
                             development of the Nation by providing professional engineering consultancy services.</p>
+                        <br>
                         <p>Artefact provides Engineering, Architectural and Project
                             Management services for Infrastucture Projects, especially
                             Highways.Artefact is a leading name in the sector.</p>
                     </div>
                     <br>
                     <br>
-
-                    <div class="about_area_left_content">
-                        <div class="single_about_area_content">
-                            <div class="about_text">
-                                <p><span>20+</span><br>Years Of Experience</p>
-                            </div>
-                        </div>
-
-                        <div class="single_about_area_content">
-                            <div class="about_text">
-                                <p><span>470+</span><br>Completed Project DPR & SQC</p>
-                            </div>
-                        </div>
-
-                        <div class="single_about_area_content">
-                            <div class="about_text">
-                                <p><span>52+</span><br>Worked With Clients</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <style>
-                        /* Main container */
-                        .about_area_left_content {
-                            display: flex;
-                            justify-content: space-between;
-                            flex-wrap: wrap;
-                            padding: 40px;
-                            background-color: #f4f4f4; /* Light grey background */
-                            border-radius: 15px;
-                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for the container */
-                        }
-
-                        /* Individual boxes */
-                        .single_about_area_content {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            flex-basis: 30%; /* Ensures three items fit in one row */
-                            margin-bottom: 40px;
-                            padding: 20px;
-                            background-color: #fff;
-                            border-radius: 10px;
-                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow on the individual boxes */
-                            transition: transform 0.3s ease, box-shadow 0.3s ease;
-                            text-align: center;
-                        }
-
-                        /* Hover effect */
-                        .single_about_area_content:hover {
-                            transform: translateY(-10px);
-                            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-                        }
-
-                        /* Typography styles */
-                        .about_text span {
-                            font-size: 50px;
-                            font-weight: bold;
-                            color: #007bff; /* Bold primary color for numbers */
-                        }
-
-                        .about_text p {
-                            font-size: 18px;
-                            color: #333;
-                            margin: 10px 0 0;
-                            line-height: 1.6;
-                        }
-
-                        /* Media query for smaller screens (mobile view) */
-                        @media (max-width: 768px) {
-                            .about_area_left_content {
-                                flex-direction: column;
-                                align-items: center;
-                                padding: 20px;
-                            }
-
-                            .single_about_area_content {
-                                width: 100%;
-                                margin-bottom: 20px;
-                            }
-                        }
-
-                        /* For larger screens (desktop view) */
-                        @media (min-width: 769px) {
-                            .about_area_left_content {
-                                justify-content: space-between;
-                            }
-
-                            .single_about_area_content {
-                                flex-basis: 30%;
-                            }
-                        }
-                    </style>
 
 
                     <style>

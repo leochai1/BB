@@ -217,7 +217,7 @@
 
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area" data--black__overlay="6"
-         style="background: linear-gradient(to left, black 20%, #003978 ) ">
+         style="background-color:#003978 ">
         <div class="ht__bradcaump__wrap">
             <div class="container">
                 <div class="row">
@@ -335,6 +335,17 @@
             <div class="timeline-item">
                 <div class="timeline-img"></div>
                 <div class="timeline-content js--fadeInLeft">
+                    <h2>1998</h2>
+                    <p>In 1998, ventured and obtained first project for services into Infrastructure Consultancy
+                        services as Engineers, Planners & Project Management Consultants with SECTORAL Focus on
+                        Highways, Airports and Urban Development. Receipts in past 5 years (FY-2019 & FY-2024) Rs. ______Cr.</p>
+                </div>
+            </div>
+
+            <!--     ITEM 2  -->
+            <div class="timeline-item">
+                <div class="timeline-img"></div>
+                <div class="timeline-content js--fadeInRight">
                     <h2>2024</h2>
                     <p>Ongoing Highway assignments - ____________ No. of services for projects under
                         construction with 732.725 Km length &amp; Project Cost of Rs. 7732.85 Cr. Billion for O&amp;M
