@@ -190,34 +190,43 @@
                                 solutions and have also won Global Bids and Competitions.
                                 To state a few:-
                             </p>
-                            <br/>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img
-                                            alt=""
-                                            class="img-responsive table-bordered"
-                                            height="526"
-                                            src="images/old/krishna_villa.jpg"
-                                            width="701"
-                                    />
-                                </div>
-                                <div class="col-md-4">
-                                    <img
-                                            alt=""
-                                            class="img-responsive table-bordered"
-                                            height="526"
-                                            src="images/old/nsll_limited1.jpg"
-                                            width="701"
-                                    />
-                                </div>
-                                <div class="col-md-4">
-                                    <img
-                                            alt=""
-                                            class="img-responsive table-bordered"
-                                            height="526"
-                                            src="images/old/falcon_city.jpg"
-                                            width="701"
-                                    />
+
+                            <div class="testimonials-wrapper">
+                                <!-- Swiper Container -->
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="content-wrapper">
+                                                <div class="content">
+                                                    <img alt="Testimonial 1" src="images/old/krishna_villa.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="content-wrapper">
+                                                <div class="content">
+                                                    <img alt="Testimonial 2" src="images/old/nsll_limited1.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="content-wrapper">
+                                                <div class="content">
+                                                    <img alt="Testimonial 3" src="images/old/falcon_city.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Navigation Arrows -->
+                                    <div class="swiper-nav-wrapper">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
                                 </div>
                             </div>
                             <br/><br/>
@@ -244,43 +253,12 @@
                                 of built up area. Building height of 102.30 meters i.e. 31 floors.
                             </p><br>
                             <br>
-                            <h3 style="color: #003978;"><b>4. Planning &amp; Development of Urban Infrastructure:</b></h3>
+                            <h3 style="color: #003978;"><b>4. Planning &amp; Development of Urban Infrastructure:</b>
+                            </h3>
                             <p>
                                 Planning &amp; Development of Urban Infrastructure for Municipal Corporation, Urban
                                 Development Authorities and State Govt. organizations.
-                            </p><br>
-
-                            <br/>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img
-                                            alt=""
-                                            class="img-responsive table-bordered"
-                                            height="526"
-                                            src="images/old/nsll_limited.jpg"
-                                            width="701"
-                                    />
-                                </div>
-                                <div class="col-md-4">
-                                    <img
-                                            alt=""
-                                            class="img-responsive table-bordered"
-                                            height="526"
-                                            src="images/old/mcd_building_delhi.jpg"
-                                            width="701"
-                                    />
-                                </div>
-                                <div class="col-md-4">
-                                    <img
-                                            alt=""
-                                            class="img-responsive table-bordered"
-                                            height="526"
-                                            src="images/old/raipur_city.jpg"
-                                            width="701"
-                                    />
-                                </div>
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -289,6 +267,215 @@
     </div>
     <!--    Add sections here-->
     <br><br>
+
+    <!-- Slider External Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Testimonial Section */
+        .testimonials-wrapper {
+            max-width: 900px;
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto; /* Center the testimonial wrapper */
+        }
+
+        .testimonials-header h1 {
+            margin-bottom: 5px;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        /* Swiper Styling */
+        .swiper {
+            padding: 1.5em;
+        }
+
+        .swiper-slide {
+            height: 400px; /* Set the height you want */
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0.08;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Set lower z-index for normal slides */
+        }
+
+
+        .swiper-slide-active {
+            height: 450px;
+            background: #fff;
+            opacity: 1;
+            transform: scale(2); /* Increased enlargement for middle image */
+            z-index: 2; /* Bring the active slide to the front */
+        }
+
+        /* Content Styling */
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            max-width: 450px; /* Limit the maximum width of the image */
+            transition: all 0.3s ease; /* Smooth transition for resizing */
+        }
+
+        .cite {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #000;
+        }
+
+        /* Swiper Navigation */
+        .swiper-nav-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1.5em;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            width: 30px; /* Reduced size */
+            height: 30px; /* Reduced size */
+            background-size: 100% 100%;
+            background-color: #000; /* Darker background */
+            border-radius: 50%;
+            padding: 5px;
+            color: #fff;
+        }
+
+        .swiper-button-prev:hover, .swiper-button-next:hover {
+            background-color: #333;
+        }
+
+        /* Swiper Pagination */
+        .swiper-pagination {
+            bottom: 10px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .swiper-slide-active {
+                transform: scale(1.15); /* Slightly reduced for smaller screens */
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                width: 25px;
+                height: 25px;
+            }
+
+            .content img {
+                max-width: 300px; /* Adjust image size for mobile */
+            }
+        }
+    </style>
+
+    <!-- Slider Section -->
+    <div class="testimonials-wrapper">
+        <header class="testimonials-header">
+            <h1 style="color:#003978">INFRASTRUCTURE</h1>
+        </header>
+
+        <!-- Swiper Container -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <img alt="Testimonial 1" src="images/old/nsll_limited.jpg">
+                            <p class="cite">- Infrastructure 1</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <img alt="Testimonial 2" src="images/old/mcd_building_delhi.jpg">
+                            <p class="cite">- Infrastructure 2</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <img alt="Testimonial 3" src="images/old/raipur_city.jpg">
+                            <p class="cite">- Infrastructure 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-nav-wrapper">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Swiper Initialization Script -->
+    <script>
+        const swiper = new Swiper(".swiper", {
+            direction: "horizontal",
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000, // Slide every 3 seconds
+                disableOnInteraction: false, // Allow user interaction without stopping autoplay
+            },
+            speed: 1000, // Transition duration (1000 milliseconds)
+            effect: 'slide', // Ensure sliding effect
+            allowTouchMove: true, // Allows touch interaction (swiping)
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 40
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true // Allow pagination bullets to be clickable
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                init: function () {
+                    this.autoplay.start(); // Start autoplay on initialization
+                },
+                slideChangeTransitionStart: function () {
+                    // Adding smoother transition during slide change
+                    this.slides.forEach(slide => {
+                        slide.style.transition = 'transform 1s ease-in-out'; // Smooth slide transition
+                    });
+                }
+            }
+        });
+    </script>
 
 
     <!-- Start Footer Area -->

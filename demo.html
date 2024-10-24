@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Landing Page</title>
+    <style>
+        /* Landing page styling */
+        .landing-page {
+            width: 100%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e8e8e8;
+            color: #7f8c8d;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-position: center;
+            text-align: center; /* Ensure text is centered on all devices */
+        }
+
+        /* Text styling */
+        .landing-page-text {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 40px;
+            color: #7f8c8d;
+            display: block;
+        }
+
+        /* Blinking cursor */
+        .blink {
+            color: #e2e2e2;
+            animation: blink 0.5s infinite;
+        }
+
+        /* Blinking animation */
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Responsive font size adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .landing-page-text {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .landing-page-text {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Home page - centered content -->
+<section>
+    <div class="landing-page">
+        <div>
+            <span class="landing-page-text" id="typewriter-text"></span>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Typewriter text
+    const typewriter_text = [
+        "\"Every Achievement is a milestone, not a destination. With every success, goals keep getting bigger\""
+    ];
+
+    // Sleep function to pause between typing and deleting
+    function sleep(milliseconds) {
+        let timeStart = new Date().getTime();
+        while (true) {
+            let elapsedTime = new Date().getTime() - timeStart;
+            if (elapsedTime > milliseconds) {
+                break;
+            }
+        }
+    }
+
+    let textIter = 0;
+
+    // Typewriter effect - text deletion
+    function deletingEffect() {
+        let word = typewriter_text[textIter].split("");
+        var loopDeleting = function () {
+            if (word.length > 0) {
+                word.pop();
+                document.getElementById('typewriter-text').innerHTML = word.join("");
+            } else {
+                if (typewriter_text.length > (textIter + 1)) {
+                    textIter++;
+                } else {
+                    textIter = 0;
+                }
+                typingEffect();
+                return false;
+            }
+            setTimeout(loopDeleting, 150);
+        }
+        loopDeleting();
+    }
+
+    // Typewriter effect - text writing
+    function typingEffect() {
+        let word = typewriter_text[textIter].split("");
+        var loopTyping = function () {
+            if (word.length > 0) {
+                document.getElementById('typewriter-text').innerHTML += word.shift();
+            } else {
+                sleep(1000);
+                deletingEffect();
+                return false;
+            }
+            setTimeout(loopTyping, 150);
+        }
+        loopTyping();
+    }
+
+    // Start the typewriter effect
+    typingEffect();
+</script>
+
+</body>
+</html>

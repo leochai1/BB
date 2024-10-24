@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <title>About Us || Artefacts Projects</title>
+    <title>Urban Infrastructure || Artefacts Projects</title>
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
@@ -34,77 +34,6 @@
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
-    <link href="css/history.css" rel="stylesheet">
-
-    <style>
-        .txtquotes {
-            background-color: #e8e8e8;
-            padding: 10px 20px;
-            border-radius: 10px;
-            color: #7f8c8d;
-            position: relative;
-            opacity: 0;
-            font-family: 'Brush Script MT', cursive;
-            font-size: 36px;
-            animation: moveToCenter 6.5s ease-in-out forwards, typing 5s steps(35, end) forwards;
-            width: fit-content;
-            margin: 0 auto;
-            white-space: normal; /* Prevents text overflow on smaller screens */
-            word-wrap: break-word; /* Makes sure long words wrap properly */
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes moveToCenter {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        /* For larger devices */
-        @media (min-width: 1200px) {
-            .txtquotes {
-                font-size: 36px;
-                padding: 15px 25px;
-            }
-        }
-
-        /* For medium devices */
-        @media (min-width: 768px) and (max-width: 1199px) {
-            .txtquotes {
-                font-size: 28px;
-                padding: 12px 20px;
-            }
-        }
-
-        /* For small devices */
-        @media (max-width: 767px) {
-            .txtquotes {
-                font-size: 22px;
-                padding: 10px 15px;
-            }
-        }
-
-        /* For extra small devices */
-        @media (max-width: 480px) {
-            .txtquotes {
-                font-size: 18px;
-                padding: 8px 10px;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
@@ -148,7 +77,7 @@
                                         <li><a href="social_contribution.html">SOCIAL CONTRIBUTIONS</a></li>
                                     </ul>
                                 </li>
-                                <li class="drop"><a href="corporate_governance.html">INVESTOR&nbsp;SERVICES</a>
+                                <li class="drop"><a href="blog.html">INVESTOR&nbsp;SERVICES</a>
                                     <ul class="dropdown">
                                         <li><a href="corporate_governance.html">CORPORATE GOVERNANCE</a></li>
                                         <li><a href="share_holding.html">SHARE HOLDING</a></li>
@@ -217,18 +146,17 @@
 
     <!-- Start Bradcaump area -->
     <div class="ht__bradcaump__area" data--black__overlay="6"
-         style="background-color:#003978 ">
+         style="background-color:#003978">
         <div class="ht__bradcaump__wrap">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">History</h2>
+                            <h2 class="bradcaump-title">Urban Infrastructure</h2>
                             <nav class="bradcaump-inner">
-                                <a class="breadcrumb-item" href="index.html"
-                                   style="color:#fff; cursor:pointer;">Home</a>
+                                <a class="breadcrumb-item" href="index.html">Home</a>
                                 <span class="brd-separetor">-</span>
-                                <span class="breadcrumb-item active">ABOUT US</span>
+                                <span class="breadcrumb-item active">Project</span>
                             </nav>
                         </div>
                     </div>
@@ -239,128 +167,314 @@
     <!-- End Bradcaump area -->
 
     <!--    Add sections here-->
+
     <div class="midpage">
-        <div class="container-fluid" id="chairman-message">
+        <div class="container-fluid">
             <div class="row">
-                <p align="left" style="background-color: #003978; color: white; font-size:23px; padding: 10px 0;">
-                    &nbsp;&nbsp;Chairman's Message</p>
-                <div class="col-md-12 col2bg">
+                <div class="col-md-12 col2bg"><br>
                     <div class="smallpage">
                         <div class="col-md-12">
+                            <br/>
+                            <p class="heading" style="background-color: #D3D3D3; color: black; padding: 10px;">
+                                Our expertise and foreign affiliations have created worldwide ability to gauge the
+                                clients' needs and convert the Town Planning ideas into realities.
+                            </p>
                             <br>
-                            <br>
-
-                            <div class="row chairmen">
-
-                                <div class="col-md-12">
-                                    <p><strong style="color:#0066CC; font-size: 17px">ARTEFACT PROJECTS
-                                        LTD.</strong>., proud to be contributors to Nation Building by providing
-                                        critical project services for Highways, Urban Infrastructure, Airports, Mining
-                                        &amp; Railways.<br><br>
-
-                                    <p> We combine technical and Project Management skills to develop projects from
-                                        concepts and
-                                        designs stage to their successful completion and operations.</p><br>
-                                    <p>Our long track record of more than 27 successful years in the niche area of
-                                        expertise reflects
-                                        our commitment, dedication and sense of purpose, apparent in all our ventures
-                                        that result in
-                                        client satisfaction.</p><br>
-
-
-                                    <div class="clear">&nbsp;</div>
-                                    <div class="bigtxt text-center heading">
-                                        <div class="txtquotes">
-                                            “Every Achievement is a milestone, not a destination. With every success,
-                                            goals keep getting bigger”
+                            <p>
+                                Artefact has successfully participated in Global Design
+                                and Planning with it’s international consortium / JV
+                                Members – M/s Atkins Plc., U.K., M/s Zaidun-Leeng Sdn.
+                                Bhd., Malaysia, and APUDG Sdn. Bhd., Malaysia. Due to
+                                their world class Designs, Planning and Architecture
+                                inputs, Artefact has been able to provide Urban Planning
+                                solutions and have also won Global Bids and Competitions.
+                                To state a few:-
+                            </p>
+                           
+                            <div class="testimonials-wrapper">
+                                <!-- Swiper Container -->
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="content-wrapper">
+                                                <div class="content">
+                                                    <img alt="Testimonial 1" src="images/old/krishna_villa.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="content-wrapper">
+                                                <div class="content">
+                                                    <img alt="Testimonial 2" src="images/old/nsll_limited1.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="content-wrapper">
+                                                <div class="content">
+                                                    <img alt="Testimonial 3" src="images/old/falcon_city.jpg">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="clear">&nbsp;</div>
+                                    <!-- Navigation Arrows -->
+                                    <div class="swiper-nav-wrapper">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
                                 </div>
                             </div>
+                            <br/><br/>
+                            <h3 style="color: #003978;"><b>
+                                1. Planning &amp; Design of New Capital City near Raipur in
+                                Chhattisgarh State, under Global Design Competition</b>
+                            </h3><br>
+                            <p>
+                                Master Plan adjudged as winner and largely adopted for implementation Area 7474
+                                hect.
+                            </p><br>
+                            <h3 style="color: #003978;"><b>
+                                2. Special Economic Zone in Chhattisgarh State</b>
+                            </h3><br>
+                            <p>
+                                Master Planning and TEFS of proposed New Special Economic Zone on land
+                                measuring 1236 hectares in proposed capital complex for Raipur in Chhattisgarh
+                                State.
+                            </p><br>
+                            <h3 style="color: #003978;"><b>3. Civic Center At New Delhi :</b></h3><br>
+                            <p>
+                                Design &amp; Drawings Proof Consultancy services to M/s IJM Infrastructure Ltd. For
+                                Civic Center Project at JLN Marg in New Delhi, total construction 1,16,755 sqr meters
+                                of built up area. Building height of 102.30 meters i.e. 31 floors.
+                            </p><br>
+                            <br>
+                            <h3 style="color: #003978;"><b>4. Planning &amp; Development of Urban Infrastructure:</b>
+                            </h3>
+                            <p>
+                                Planning &amp; Development of Urban Infrastructure for Municipal Corporation, Urban
+                                Development Authorities and State Govt. organizations.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br><br>
-
-        <div class="container-fluid">
-            <div class="row">
-                <h2 align="left" class="sm-xs-center" id="history"
-                    style="background-color: #003978; color: white; font-size:27px; padding: 10px 0;">&nbsp;&nbsp;History</h2>
-                <div class="col-md-12 col2bg">
-                    <div class="smallpage">
-                        <br>
-                        <div class="col-md-12">
-                            <div class="heading">
-                                <p class="text-center" style="font-size:22px; font-weight:bold;">The Company has built
-                                    its reputation as consultant for National Highways.</p><br><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <br><br>
-
     <!--    Add sections here-->
+    <br><br>
+    <!-- External Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.css" rel="stylesheet">
 
-    <section class="timeline">
-        <div class="container">
+    <!-- Internal CSS -->
+    <style>
+        /* Testimonial Section */
+        .testimonials-wrapper {
+            max-width: 900px;
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto; /* Center the testimonial wrapper */
+        }
 
-            <!--     ITEM 1  -->
-            <div class="timeline-item">
-                <div class="timeline-img"></div>
-                <div class="timeline-content js--fadeInLeft">
-                    <h2>1987</h2>
-                    <p>Artefact Projects Ltd. was incorporated.</p>
+        .testimonials-header h1 {
+            margin-bottom: 5px;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        /* Swiper Styling */
+        .swiper {
+            padding: 1.5em;
+        }
+
+        .swiper-slide {
+            height: 400px; /* Set the height you want */
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0.08;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Set lower z-index for normal slides */
+        }
+
+
+        .swiper-slide-active {
+            height: 450px;
+            background: #fff;
+            opacity: 1;
+            transform: scale(2); /* Increased enlargement for middle image */
+            z-index: 2; /* Bring the active slide to the front */
+        }
+
+        /* Content Styling */
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            max-width: 450px; /* Limit the maximum width of the image */
+            transition: all 0.3s ease; /* Smooth transition for resizing */
+        }
+
+        .cite {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #000;
+        }
+
+        /* Swiper Navigation */
+        .swiper-nav-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1.5em;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            width: 30px; /* Reduced size */
+            height: 30px; /* Reduced size */
+            background-size: 100% 100%;
+            background-color: #000; /* Darker background */
+            border-radius: 50%;
+            padding: 5px;
+            color: #fff;
+        }
+
+        .swiper-button-prev:hover, .swiper-button-next:hover {
+            background-color: #333;
+        }
+
+        /* Swiper Pagination */
+        .swiper-pagination {
+            bottom: 10px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .swiper-slide-active {
+                transform: scale(1.15); /* Slightly reduced for smaller screens */
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                width: 25px;
+                height: 25px;
+            }
+
+            .content img {
+                max-width: 300px; /* Adjust image size for mobile */
+            }
+        }
+    </style>
+
+    <!-- Slider Section -->
+    <div class="testimonials-wrapper">
+        <header class="testimonials-header">
+            <h1 style="color:#003978">INFRASTRUCTURE</h1>
+        </header>
+
+        <!-- Swiper Container -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <img alt="Testimonial 1" src="images/old/nsll_limited.jpg">
+                            <p class="cite">- Infrastructure 1</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <img alt="Testimonial 2" src="images/old/mcd_building_delhi.jpg">
+                            <p class="cite">- Infrastructure 2</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <img alt="Testimonial 3" src="images/old/raipur_city.jpg">
+                            <p class="cite">- Infrastructure 3</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!--     ITEM 2  -->
-            <div class="timeline-item">
-                <div class="timeline-img"></div>
-                <div class="timeline-content js--fadeInRight">
-                    <h2>2010</h2>
-                    <p>Completed Successful Private Placement exercise of 9,00,000 Eq Shares and 10,22,400 warrants of
-                        Rs.10/- each at a premium of Rs.91/- each, amounting to Rs.194.2 Mns.</p>
-                </div>
+            <!-- Navigation Arrows -->
+            <div class="swiper-nav-wrapper">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
             </div>
-
-            <!--     ITEM 1  -->
-            <div class="timeline-item">
-                <div class="timeline-img"></div>
-                <div class="timeline-content js--fadeInLeft">
-                    <h2>1998</h2>
-                    <p>In 1998, ventured and obtained first project for services into Infrastructure Consultancy
-                        services as Engineers, Planners & Project Management Consultants with SECTORAL Focus on
-                        Highways, Airports and Urban Development. Receipts in past 5 years (FY-2019 & FY-2024) Rs. ______Cr.</p>
-                </div>
-            </div>
-
-            <!--     ITEM 2  -->
-            <div class="timeline-item">
-                <div class="timeline-img"></div>
-                <div class="timeline-content js--fadeInRight">
-                    <h2>2024</h2>
-                    <p>Ongoing Highway assignments - ____________ No. of services for projects under
-                        construction with 732.725 Km length &amp; Project Cost of Rs. 7732.85 Cr. Billion for O&amp;M
-                        Projects services of 586.092 Km Length and Project Cost of Rs. ______Cr. and Gross
-                        contracted orders as on sept 2024 at Rs. ________ Cr.</p>
-                </div>
-            </div>
-
-
         </div>
-    </section>
-    <!-- partial -->
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
-    <script src="js/history.js"></script>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Swiper Initialization Script -->
+    <script>
+        const swiper = new Swiper(".swiper", {
+            direction: "horizontal",
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000, // Slide every 3 seconds
+                disableOnInteraction: false, // Allow user interaction without stopping autoplay
+            },
+            speed: 1000, // Transition duration (1000 milliseconds)
+            effect: 'slide', // Ensure sliding effect
+            allowTouchMove: true, // Allows touch interaction (swiping)
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 40
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true // Allow pagination bullets to be clickable
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                init: function () {
+                    this.autoplay.start(); // Start autoplay on initialization
+                },
+                slideChangeTransitionStart: function () {
+                    // Adding smoother transition during slide change
+                    this.slides.forEach(slide => {
+                        slide.style.transition = 'transform 1s ease-in-out'; // Smooth slide transition
+                    });
+                }
+            }
+        });
+    </script>
 
 
     <!-- Start Footer Area -->
@@ -377,21 +491,20 @@
                                     <h2 class="ft__title">ABOUT</h2>
                                 </div>
                                 <div class="ft__details">
-                                    <p>Artefact Projects Ltd. has been engaged multi-disciplinary consultancy services
-                                        for
-                                        Highways &amp; Infrastructure Projects.
+                                    <p>Artefact Projects Ltd. Nagpur has been constituted as a
+                                        civil engineering multi disciplined consultancy organization.
                                     </p>
                                 </div>
                                 <br>
                                 <div class="widget_footer_social">
                                     <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
-                                            class="fa fa-facebook" style="color:#fff;"></i> </a>&nbsp;
+                                            class="fa fa-facebook"></i> </a>&nbsp;
                                     <a href="https://www.facebook.com/artefactprojects/" target="_blank"> <i
-                                            class="fa fa-twitter" style="color:#fff;"></i> </a>&nbsp;
+                                            class="fa fa-twitter"></i> </a>&nbsp;
                                     <a href="http://www.artefactprojects.com/" target="_blank"> <i
-                                            class="fa fa-google-plus" style="color:#fff;"></i> </a>&nbsp;
+                                            class="fa fa-google-plus"></i> </a>&nbsp;
                                     <a href="https://in.linkedin.com/in/artefact-projects-limited-b22b7825"
-                                       target="_blank"> <i class="fa fa-linkedin" style="color:#fff;"></i> </a>
+                                       target="_blank"> <i class="fa fa-linkedin"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -424,7 +537,7 @@
                                 <div class="footer__link">
                                     <p style="color:#fff;"><u>Address:</u><br>
                                         “Artefact Towers”<br>
-                                        Office No.106, Chhatrapati Square,<br>
+                                        106, 54/3, Chhatrapati Square,<br>
                                         Wardha Road,<br> Nagpur – 440015<br><br>
                                         <u>Email:</u>&nbsp;&nbsp;
                                         <b>artefactngp@artefactprojects.com</b><br><br>
@@ -438,7 +551,7 @@
                         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 xmt-40">
                             <div class="footer quick__link">
                                 <div class="footer__widget">
-                                    <h2 class="ft__title">DELHI OFFICE</h2>
+                                    <h2 class="ft__title">CORPORATE OFFICE</h2>
                                     <div class="footer__link">
                                         <p style="color:#fff;"><u>Address:</u><br>
                                             First Floor, Yog Divya Mandir,<br>
@@ -462,8 +575,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="copyright__inner">
-                            <p>Copyright <a href="disclaimer.html" target="_blank">© Artefact Projects Limited</a>
-                                All Rights Reserved 2024</p>
+                            <p>Copyright <a href="#" target="_blank">Devitems</a>
+                                All Rights Reserved 2017</p>
                         </div>
                     </div>
                 </div>
@@ -490,16 +603,6 @@
 <script src="js/waypoints.min.js"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
 <script src="js/main.js"></script>
-
-<script type="text/javascript">
-    jQuery(document).ready(function(){jQuery('#demo').skdslider({'delay':5000, 'fadeSpeed':3000,'showNextPrev':true,'showPlayButton':false,'autoStart':true});});
-</script>
-
-<script>
-    $('#myTab li:nth-child(2) a').tab('show')
-    $('.alltabs').mouseleave(function() {});
-    $('.nav-tabs[data-toggle="tab-hover"] > li > a').click( function(){$(this).tab('show');});
-</script>
 
 </body>
 
